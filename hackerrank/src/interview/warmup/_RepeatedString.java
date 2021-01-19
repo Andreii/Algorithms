@@ -39,6 +39,7 @@ public class _RepeatedString {
 
         String s = scanner.nextLine();
 
+
         long n = scanner.nextLong();
         scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
 

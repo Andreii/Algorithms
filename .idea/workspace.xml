@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2c642753-5422-49d6-91b0-0d1c161f501c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/hackerrank/src/interview/warmup/_RepeatedString.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="2c642753-5422-49d6-91b0-0d1c161f501c" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +116,7 @@
       <workItem from="1610909353066" duration="614000" />
       <workItem from="1611043359678" duration="2805000" />
       <workItem from="1611065354090" duration="8813000" />
-      <workItem from="1611075063085" duration="2606000" />
+      <workItem from="1611075063085" duration="2857000" />
     </task>
     <servers />
   </component>
