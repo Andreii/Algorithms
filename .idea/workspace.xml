@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c642753-5422-49d6-91b0-0d1c161f501c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/leetcode/src/algorithms/BinaryTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leetcode/src/solutions/_938.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/src/algorithms/_Kadane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -11,9 +10,6 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="CoverageViewManager">
-    <option name="myElementSize" value="393" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -23,26 +19,22 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="eGrmUPaB" />
   </component>
   <component name="ProjectId" id="1nD0SHIj3hfi9DKHc9ska0G4rMI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="Downloaded.Files.Path.Enabled" value="false" />
-    <property name="Repository.Attach.Annotations" value="false" />
-    <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RemoteSynchronizer">
     <option name="targetMappings">
@@ -66,12 +58,12 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="_1662" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="solutions._1662" />
+    <configuration name="_Kadane" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="algorithms._Kadane" />
       <module name="leetcode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="solutions.*" />
+          <option name="PATTERN" value="algorithms.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -81,7 +73,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application._1662" />
+        <item itemvalue="Application._Kadane" />
       </list>
     </recent_temporary>
   </component>
@@ -95,8 +87,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1610909351037</updated>
-      <workItem from="1610909353066" duration="285000" />
-      <workItem from="1610964732609" duration="1997000" />
+      <workItem from="1610909353066" duration="614000" />
+      <workItem from="1611043359678" duration="2805000" />
+      <workItem from="1611065354090" duration="4934000" />
     </task>
     <servers />
   </component>
@@ -108,15 +101,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/algo$_1662.ic" NAME="_1662 Coverage Results" MODIFIED="1610965170817" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>solutions.*</FILTER>
-    </SUITE>
   </component>
 </project>
