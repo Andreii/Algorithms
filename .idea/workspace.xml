@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c642753-5422-49d6-91b0-0d1c161f501c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hackerrank/src/interview/warmup/_CountingValleys.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/algorithms/BinaryTree.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/leetcode/algorithms/BinaryTree.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -120,7 +117,7 @@
       <updated>1610909351037</updated>
       <workItem from="1610909353066" duration="614000" />
       <workItem from="1611043359678" duration="2805000" />
-      <workItem from="1611065354090" duration="7773000" />
+      <workItem from="1611065354090" duration="8646000" />
     </task>
     <servers />
   </component>
