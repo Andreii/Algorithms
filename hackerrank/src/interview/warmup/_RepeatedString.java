@@ -52,6 +52,7 @@ public class _RepeatedString {
 
         bufferedWriter.close();
 
+
         scanner.close();
     }
 }
