@@ -45,6 +45,7 @@ public class _RepeatedString {
 
         long result = repeatedString(s, n);
 
+
         bufferedWriter.write(String.valueOf(result));
         bufferedWriter.newLine();
 
