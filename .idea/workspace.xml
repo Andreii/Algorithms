@@ -1,21 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2c642753-5422-49d6-91b0-0d1c161f501c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CtCI/src/Arrays_and_Strings/_1_3_URLify_ctci_solution.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CtCI/CtCI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CtCI/CtCI.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CtCI/src/Linked_List/_1_2_Check_Permutations.java" beforeDir="false" afterPath="$PROJECT_DIR$/CtCI/src/Arrays_and_Strings/_1_2_Check_Permutations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CtCI/src/Linked_List/_1_3_URLify.java" beforeDir="false" afterPath="$PROJECT_DIR$/CtCI/src/Arrays_and_Strings/_1_3_URLify.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CtCI/src/Linked_List/_1_4_Palindrome_Permutations.java" beforeDir="false" afterPath="$PROJECT_DIR$/CtCI/src/Arrays_and_Strings/_1_4_Palindrome_Permutations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/algo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/algorithms/BinaryTree$TreeNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/algorithms/BinaryTree.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/leetcode/algorithms/_Kadane.class" beforeDir="false" />
-    </list>
-    <list id="315a3148-9c63-4dfe-8056-b8546a216afd" name="no commit" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-    </list>
+    <list default="true" id="2c642753-5422-49d6-91b0-0d1c161f501c" name="Default Changelist" comment="" />
+    <list id="315a3148-9c63-4dfe-8056-b8546a216afd" name="no commit" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,10 +34,11 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/CtCI/CtCI.iml" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RemoteSynchronizer">
@@ -165,6 +154,7 @@
       <workItem from="1611065354090" duration="8813000" />
       <workItem from="1611075063085" duration="13146000" />
       <workItem from="1611399705838" duration="528000" />
+      <workItem from="1611559066216" duration="57000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1611082171283</created>
