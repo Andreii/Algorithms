@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CtCI/CtCI.iml" filepath="$PROJECT_DIR$/CtCI/CtCI.iml" />
       <module fileurl="file://$PROJECT_DIR$/algo.iml" filepath="$PROJECT_DIR$/algo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cp4/cp4.iml" filepath="$PROJECT_DIR$/cp4/cp4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/general/general.iml" filepath="$PROJECT_DIR$/general/general.iml" />
       <module fileurl="file://$PROJECT_DIR$/hackerrank/hackerrank.iml" filepath="$PROJECT_DIR$/hackerrank/hackerrank.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode/leetcode.iml" filepath="$PROJECT_DIR$/leetcode/leetcode.iml" />
     </modules>
