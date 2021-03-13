@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c642753-5422-49d6-91b0-0d1c161f501c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/general/src/algorithms/Bitset_algo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/general/src/algorithms/Karatsuba.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/src/algorithms/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/general/src/algorithms/BinaryTree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/src/algorithms/Bitset.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/src/algorithms/Bitwise.java" beforeDir="false" afterPath="$PROJECT_DIR$/general/src/algorithms/Bitwise.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/src/algorithms/_Kadane.java" beforeDir="false" afterPath="$PROJECT_DIR$/general/src/algorithms/_Kadane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/algo.iml" afterDir="false" />
     </list>
-    <list id="315a3148-9c63-4dfe-8056-b8546a216afd" name="no commit" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list id="315a3148-9c63-4dfe-8056-b8546a216afd" name="no commit" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,29 +30,12 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/.idea/workspace.xml">
-      <ranges>
-        <range start1="0" end1="1" start2="0" end2="0" changelist="315a3148-9c63-4dfe-8056-b8546a216afd" />
-        <range start1="4" end1="6" start2="3" end2="11" changelist="315a3148-9c63-4dfe-8056-b8546a216afd" />
-        <range start1="12" end1="12" start2="17" end2="20" changelist="2c642753-5422-49d6-91b0-0d1c161f501c" />
-        <range start1="27" end1="27" start2="35" end2="57" changelist="315a3148-9c63-4dfe-8056-b8546a216afd" />
-        <range start1="28" end1="29" start2="58" end2="59" changelist="315a3148-9c63-4dfe-8056-b8546a216afd" />
-        <range start1="64" end1="68" start2="94" end2="98" changelist="315a3148-9c63-4dfe-8056-b8546a216afd" />
-        <range start1="70" end1="71" start2="100" end2="101" changelist="315a3148-9c63-4dfe-8056-b8546a216afd" />
-        <range start1="78" end1="81" start2="108" end2="111" changelist="315a3148-9c63-4dfe-8056-b8546a216afd" />
-        <range start1="83" end1="84" start2="113" end2="114" changelist="315a3148-9c63-4dfe-8056-b8546a216afd" />
-        <range start1="91" end1="94" start2="121" end2="124" changelist="315a3148-9c63-4dfe-8056-b8546a216afd" />
-        <range start1="96" end1="97" start2="126" end2="127" changelist="315a3148-9c63-4dfe-8056-b8546a216afd" />
-        <range start1="104" end1="107" start2="134" end2="137" changelist="315a3148-9c63-4dfe-8056-b8546a216afd" />
-        <range start1="109" end1="110" start2="139" end2="140" changelist="315a3148-9c63-4dfe-8056-b8546a216afd" />
-        <range start1="132" end1="134" start2="162" end2="163" changelist="315a3148-9c63-4dfe-8056-b8546a216afd" />
-        <range start1="135" end1="137" start2="164" end2="167" changelist="315a3148-9c63-4dfe-8056-b8546a216afd" />
-        <range start1="186" end1="187" start2="216" end2="224" changelist="315a3148-9c63-4dfe-8056-b8546a216afd" />
-        <range start1="239" end1="240" start2="276" end2="280" changelist="315a3148-9c63-4dfe-8056-b8546a216afd" />
-        <range start1="243" end1="243" start2="283" end2="288" changelist="2c642753-5422-49d6-91b0-0d1c161f501c" />
-      </ranges>
-    </file>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/Andreii/algo" />
+      </set>
+    </option>
   </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="qoWdIdRK" />
@@ -86,19 +62,7 @@
       </list>
     </option>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Application.Bitset_algo (1)">
+  <component name="RunManager" selected="Application.Karatsuba">
     <configuration name="Bitset_algo (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="algorithms.Bitset_algo" />
       <module name="general" />
@@ -125,12 +89,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Bitwise" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Bitwise" />
+    <configuration name="Karatsuba" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="algorithms.Karatsuba" />
       <module name="general" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value=".*" />
+          <option name="PATTERN" value="algorithms.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -166,11 +130,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Karatsuba" />
         <item itemvalue="Application.Bitset_algo (1)" />
         <item itemvalue="Application._salesByMatch" />
         <item itemvalue="Application._Kadane" />
         <item itemvalue="Application.Bitset_algo" />
-        <item itemvalue="Application.Bitwise" />
       </list>
     </recent_temporary>
   </component>
@@ -238,13 +202,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
