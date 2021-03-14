@@ -18,7 +18,7 @@ public class _Kadane {
         int sum = 0; // -2, -1
         int maxSum = Integer.MIN_VALUE;
 
-        for ( int elem : arr) {
+        for (int elem : arr) {
             sum = Math.max(elem, elem + sum);
             maxSum = Math.max(sum, maxSum);
         }
