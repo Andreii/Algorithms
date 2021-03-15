@@ -1,4 +1,4 @@
-package algorithms;
+package data_structures;
 
 public class BinaryTree {
     class TreeNode {

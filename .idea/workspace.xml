@@ -63,12 +63,12 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.MergeSort">
-    <configuration name="Bitset_algo (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="algorithms.Bitset_algo" />
+    <configuration name="Bitset_algo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="data_structures.Bitset_algo" />
       <module name="general" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="algorithms.*" />
+          <option name="PATTERN" value="data_structures.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -81,7 +81,7 @@
       <module name="general" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="algorithms.*" />
+          <option name="PATTERN" value="data_structures.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -94,7 +94,7 @@
       <module name="general" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="algorithms.*" />
+          <option name="PATTERN" value="data_structures.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -107,7 +107,7 @@
       <module name="general" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="algorithms.*" />
+          <option name="PATTERN" value="data_structures.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
