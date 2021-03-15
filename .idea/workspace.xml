@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2c642753-5422-49d6-91b0-0d1c161f501c" name="Default Changelist" comment="Karatsuba multiplication divide-and-conquer">
-      <change afterPath="$PROJECT_DIR$/general/src/algorithms/MergeSort.java" afterDir="false" />
+    <list default="true" id="2c642753-5422-49d6-91b0-0d1c161f501c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/general/src/algorithms/QuickSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/general/src/algorithms/RSelect.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/src/algorithms/_Kadane.java" beforeDir="false" afterPath="$PROJECT_DIR$/general/src/algorithms/_Kadane.java" afterDir="false" />
     </list>
     <list id="315a3148-9c63-4dfe-8056-b8546a216afd" name="no commit" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,7 +62,19 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MergeSort">
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.QuickSort">
     <configuration name="Bitset_algo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="data_structures.Bitset_algo" />
       <module name="general" />
@@ -102,12 +114,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="_Kadane" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="algorithms._Kadane" />
+    <configuration name="QuickSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="algorithms.QuickSort" />
       <module name="general" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="data_structures.*" />
+          <option name="PATTERN" value="algorithms.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -130,11 +142,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.QuickSort" />
         <item itemvalue="Application.MergeSort" />
         <item itemvalue="Application.Karatsuba" />
         <item itemvalue="Application.Bitset_algo (1)" />
         <item itemvalue="Application._salesByMatch" />
-        <item itemvalue="Application._Kadane" />
       </list>
     </recent_temporary>
   </component>
@@ -198,7 +210,21 @@
       <option name="project" value="LOCAL" />
       <updated>1615630764419</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Bitsets">
+      <created>1615805282569</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1615805282569</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Refactor">
+      <created>1615805391524</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1615805391524</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,12 +235,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
@@ -222,7 +249,9 @@
     <MESSAGE value="test" />
     <MESSAGE value="Better project structure" />
     <MESSAGE value="Karatsuba multiplication divide-and-conquer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Karatsuba multiplication divide-and-conquer" />
+    <MESSAGE value="Bitsets" />
+    <MESSAGE value="Refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -242,6 +271,26 @@
           <line>9</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/general/src/algorithms/QuickSort.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/general/src/algorithms/QuickSort.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/general/src/algorithms/QuickSort.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/general/src/algorithms/QuickSort.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
           <option name="timeStamp" value="15" />
@@ -250,7 +299,8 @@
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
-        <watch expression="str" language="JAVA" />
+        <watch expression="arr[k]" />
+        <watch expression="arr[i]" />
       </configuration>
     </watches-manager>
   </component>
