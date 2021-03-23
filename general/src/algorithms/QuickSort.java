@@ -28,9 +28,9 @@ public class QuickSort {
     }
 
     private static int partition(int[] arr, int l, int r) {
-        int i = l+1, j = l+1, z = 1;
+        int i = l+1, z = 1;
 
-        while(j <= r) {
+        for(int j = l+1; j <= r; j++) {
             if(arr[j] <= arr[l]) {
                 if(i != j) {
                     z = arr[i];
@@ -39,7 +39,6 @@ public class QuickSort {
                 }
                 i++;
             }
-            j++;
         }
 
         z = arr[i-1];
