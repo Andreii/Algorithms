@@ -12,9 +12,7 @@ public class QuickSort {
     }
 
     private static void quicksort(int[] arr, int l, int r) {
-        if (l >= r) {
-            return;
-        } else {
+        if (l < r) {
             int i = choosePartition(arr, l, r);
             int z = arr[i];
             arr[i] = arr[l];
@@ -30,14 +28,15 @@ public class QuickSort {
     }
 
     private static int partition(int[] arr, int l, int r) {
-        int i = l + 1, z = 1;
+        int i = l-1, z = 1;
+        int pivot = arr[l];
 
-        for (int j = l + 1; j < r; j++) {
-            if (arr[j] <= arr[l]) {
+        for (int j = l; j < r; j++) {
+            if (arr[j] <= pivot) {
                 i++;
-                z = arr[j];
-                arr[j] = arr[i];
-                arr[i] = z;
+                z = arr[i];
+                arr[i] = arr[j];
+                arr[j] = z;
             }
         }
 
@@ -45,6 +44,6 @@ public class QuickSort {
         arr[i] = arr[l];
         arr[l] = z;
 
-        return i;
+        return i+1;
     }
 }
