@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2c642753-5422-49d6-91b0-0d1c161f501c" name="Default Changelist" comment="">
+    <list default="true" id="2c642753-5422-49d6-91b0-0d1c161f501c" name="Default Changelist" comment="Quick sort improvement">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/src/algorithms/QuickSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/general/src/algorithms/QuickSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/src/algorithms/Karatsuba.java" beforeDir="false" afterPath="$PROJECT_DIR$/general/src/algorithms/Karatsuba.java" afterDir="false" />
     </list>
     <list id="315a3148-9c63-4dfe-8056-b8546a216afd" name="no commit" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,19 +62,7 @@
       </list>
     </option>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Application.QuickSort">
+  <component name="RunManager" selected="Application.Karatsuba">
     <configuration name="Bitset_algo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="data_structures.Bitset_algo" />
       <module name="general" />
@@ -142,9 +130,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Karatsuba" />
         <item itemvalue="Application.QuickSort" />
         <item itemvalue="Application.MergeSort" />
-        <item itemvalue="Application.Karatsuba" />
         <item itemvalue="Application._salesByMatch" />
       </list>
     </recent_temporary>
@@ -232,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615810977485</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Quick sort improvement">
+      <created>1616524499023</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1616524499023</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,13 +238,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
@@ -259,7 +253,8 @@
     <MESSAGE value="Karatsuba multiplication divide-and-conquer" />
     <MESSAGE value="Bitsets" />
     <MESSAGE value="Refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor" />
+    <MESSAGE value="Quick sort improvement" />
+    <option name="LAST_COMMIT_MESSAGE" value="Quick sort improvement" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -279,6 +274,11 @@
           <line>9</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/general/src/algorithms/Karatsuba.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
           <option name="timeStamp" value="15" />
@@ -287,9 +287,10 @@
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
-        <watch expression="pivot" language="JAVA" />
-        <watch expression="arr[j]" />
-        <watch expression="arr[i]" language="JAVA" />
+        <watch expression="str" language="JAVA" />
+        <watch expression="number1.toString().substring(half)" />
+        <watch expression="new BigInteger(String.valueOf((int)Math.pow(10, length)))&#10;                    .multiply(ac)&#10;                    .add(new BigInteger(String.valueOf((int)Math.pow(10, half))).multiply(adbc))&#10;                    .add(bd)" />
+        <watch expression="new BigInteger(String.valueOf((int)Math.pow(10, length)))" />
       </configuration>
     </watches-manager>
   </component>

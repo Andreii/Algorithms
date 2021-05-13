@@ -1,33 +1,40 @@
 package algorithms;
 
+import java.math.BigInteger;
+
 public class Karatsuba {
     public static void main(String[] args) {
-        System.out.printf("Sum is %.0f", karatsuba(9999, 9999, 4));
+
+        BigInteger nr1 = new BigInteger("3141592653589793238462643383279502884197169399375105820974944592");
+        BigInteger nr2 = new BigInteger("2718281828459045235360287471352662497757247093699959574966967627");
+
+        System.out.printf("Result is %d", karatsuba(nr1,nr2, 64));
     }
 
-    private static double karatsuba(int number1, int number2, int length) {
+    private static BigInteger karatsuba(BigInteger number1, BigInteger number2, int length) {
         if(length == 1) {
-            return number1 * number2;
+            return number1.multiply(number2);
         } else {
-            int half = length/2;
-            int halfDivider = (int) Math.pow(10, half);
+            int half = length / 2;
             // a,b = first and second half of number1
             // c,d = first and second half of number2
             // p = a + b,  q = c + d
             // recursive ac = a * c, bd = b * d, pq = p * q
             // adbc = pq - ac - bd
             // result = 10^2 * ac + 10^n/2 * adbc + bd
-            int a = number1 / halfDivider;
-            int b = number1 % halfDivider;
-            int c = number2 / halfDivider;
-            int d = number2 % halfDivider;
-            int p = a + b;
-            int q = c + d;
-            double ac = karatsuba(a, c, half);
-            double bd = karatsuba(b, d, half);
-            double pq = karatsuba(p, q, half);
-            double adbc = pq - ac - bd;
-            return Math.pow(10, length) * ac + Math.pow(10, half) * adbc + bd;
+            BigInteger a = new BigInteger(number1.toString().substring(0,half));
+            BigInteger b = new BigInteger((number1.toString().substring(half)).equals("") ? "0" : number1.toString().substring(half) );
+            BigInteger c = new BigInteger(number2.toString().substring(0,half));
+            BigInteger d = new BigInteger((number2.toString().substring(half)).equals("") ? "0" : number2.toString().substring(half) );
+            BigInteger ac = karatsuba(a, c, half);
+            BigInteger bd = karatsuba(b, d, half);
+            BigInteger pq = karatsuba(a.add(b), c.add(d), half);
+            BigInteger adbc = pq.subtract(ac).subtract(bd);
+
+            return new BigInteger(String.valueOf((int)Math.pow(10, length)))
+                    .multiply(ac)
+                    .add(new BigInteger(String.valueOf((int)Math.pow(10, half))).multiply(adbc))
+                    .add(bd);
         }
     }
 }
