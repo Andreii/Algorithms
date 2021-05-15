@@ -1,5 +1,7 @@
 package algorithms;
 
+import java.util.Arrays;
+
 public class MergeSort {
     public static void main(String[] args) {
         int[] test = new int[]{3, 2, 5, 4, 6, 0, 1, 19};
@@ -18,17 +20,8 @@ public class MergeSort {
             return new int[] { Math.min(arr[0], arr[1]), Math.max(arr[0], arr[1]) };
         } else {
             int half = arr.length/2;
-            int[] left = new int[half];
-            int[] right = new int[half];
-
-            // build left member array
-            for(int i = 0; i < half; i++) {
-                left[i] = arr[i];
-            }
-            // build right member array
-            for(int i = 0; i < half; i++) {
-                right[i] = arr[half + i];
-            }
+            int[] left = Arrays.copyOfRange(arr, 0, half);
+            int[] right = Arrays.copyOfRange(arr, half, arr.length);
 
             left = mergeSort(left);
             right = mergeSort(right);
@@ -38,26 +31,16 @@ public class MergeSort {
             // merge
             int i = 0;
             int j = 0;
-            int k = 0;
-            while(i < half && j < half) {
-                if(left[i] <= right[j]) {
-                    result[k] = left[i];
-                    i++;
+            while(i < left.length || j < right.length) {
+                if(i == left.length) {
+                    result[i+j] = right[j++];
+                } else if(j == right.length) {
+                    result[i+j] = left[i++];
+                } else if(left[i] <= right[j]) {
+                    result[i+j] = left[i++];
                 } else {
-                    result[k] = right[j];
-                    j++;
+                    result[i+j] = right[j++];
                 }
-                k++;
-            }
-
-            while(i < half) {
-                result[k] = left[i];
-                i++; k++;
-            }
-
-            while(j < half) {
-                result[k] = right[j];
-                j++; k++;
             }
 
             return result;
