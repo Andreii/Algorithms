@@ -26,7 +26,6 @@ public class bitset {
                 StringBuilder::append,
                 StringBuilder::append
 
-                // cristi 13 martie nascut
         ).toString() + " " + bitSet.cardinality());
     }
 }
