@@ -30,44 +30,49 @@ public class MinCut {
             line = bufferedReader.readLine();
         }
 
-        int minCut = minCut(adjacentList);
-
-        for(int i = 0; i < adjacentList.size(); i++) {
-            for (int j = 0; j < adjacentList.get(i).size(); j++) {
-                System.out.printf("%d ", adjacentList.get(i).get(j));
-            }
-            System.out.println();
+        int minCut = Integer.MAX_VALUE;
+        for(int i = 0; i < 1_000_00; i++) {
+            minCut = Math.min(minCut, minCut(new ArrayList<>(adjacentList)));
+            System.out.println(minCut);
         }
+
+        System.out.println(minCut);
     }
 
     public static int minCut(List<List<Integer>> adjList) {
 
-        List<Integer> visitedRow = new ArrayList<>();
         List<Integer> rowList = new ArrayList<>();
         for(int i = 0; i < adjList.size(); i++) {
-            rowList.add(i);
+            rowList.add(i+1);
         }
 
         while(rowList.size() > 2) {
             int rowRandomInteger = (int) (Math.random() * (rowList.size()) - 1);
-            int rowRandom = rowList.get(rowRandomInteger);
-            int colRandom = adjList.get(rowRandom).get((int) (Math.random() * (adjList.get(rowRandom).size()) - 1)) -1;
-            visitedRow.add(rowRandom);
+            int rowRandomValue = rowList.get(rowRandomInteger);
+            int rowRandomIndex = rowRandomValue - 1;
+
+            if (adjList.get(rowRandomIndex).size() == 0) {
+                rowList = rowList.stream().filter(v -> v != rowRandomValue).collect(Collectors.toList());
+                continue;
+            }
+            int colRandomValue = adjList.get(rowRandomIndex).get((int) (Math.max(Math.random() * (adjList.get(rowRandomIndex).size()),0)));
+            int colRandomIndex = colRandomValue - 1;
+
             List<Integer> mergedRowCol = new ArrayList<>();
-            List<Integer> colList = adjList.get(colRandom).stream().filter(v -> v != rowRandom + 1).collect(Collectors.toList());
-            mergedRowCol.addAll(adjList.get(rowRandom).stream().filter(v -> v != colRandom + 1).collect(Collectors.toList()));
-            mergedRowCol.addAll(colList);
-            adjList.set(rowRandom, mergedRowCol);
+            List<Integer> colList = adjList.get(colRandomIndex).stream().filter(v -> v != rowRandomValue).collect(Collectors.toList());
+            mergedRowCol.addAll(adjList.get(rowRandomIndex).stream().filter(v -> v != colRandomValue).collect(Collectors.toList()));
+            mergedRowCol.addAll(colList.stream().filter(v -> v != rowRandomValue).collect(Collectors.toList()));
+            adjList.set(rowRandomIndex, mergedRowCol);
 
             for(Integer col : colList.stream().distinct().collect(Collectors.toList())) {
                 List<Integer> column = adjList.get(col - 1);
-                column.replaceAll( v -> v == colRandom + 1 ? rowRandom : v);
+                column.replaceAll( v -> v == colRandomValue ? rowRandomValue : v);
             }
 
-            rowList = rowList.stream().filter(v -> v != colRandom).collect(Collectors.toList());
-            adjList.set(colRandom, new ArrayList<>());
+            rowList = rowList.stream().filter(v -> v != colRandomValue).collect(Collectors.toList());
+            adjList.set(colRandomIndex, new ArrayList<>());
         }
 
-        return adjList.get(0).size();
+        return adjList.get(rowList.get(0)-1).size();
     }
 }
