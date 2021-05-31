@@ -7,8 +7,8 @@ import java.util.stream.Collectors;
 
 public class Kosaraju {
     private static int numSCC = 0;
-    private static final int LIST_SIZE = 875_715;
-    private static int currentLabel = LIST_SIZE-1;
+    private static final int LIST_SIZE = 12;
+    private static int currentLabel = LIST_SIZE;
     private static Map<Integer, Integer> scc = new HashMap<>(LIST_SIZE);
     private static Map<Integer, Integer> scc_list = new HashMap<>(LIST_SIZE);
     private static List<Integer> topology = new ArrayList<>(LIST_SIZE);
@@ -24,9 +24,9 @@ public class Kosaraju {
         Map<Integer, List<Integer>> adjList = new HashMap<>(LIST_SIZE);
         Map<Integer, List<Integer>> adjListReversed = new HashMap<>(LIST_SIZE);
 
-        Scanner in = new Scanner(new File("/home/act/mds/projects/git/algo/general/src/algorithms/SCC_test_3.txt"));
+        Scanner in = new Scanner(new File("//Users/andrei/IdeaProjects/algo/general/src/algorithms/SCC_test_5.txt"));
 
-        for(int i = 1; i <= LIST_SIZE; i++) {
+        for(int i = 0; i <= LIST_SIZE; i++) {
             topology.add(-1);
         }
 
@@ -35,19 +35,11 @@ public class Kosaraju {
             int v = Integer.parseInt(line.split("\\s")[0]);
             int w = Integer.parseInt(line.split("\\s")[1]);
             List<Integer> wVertexes = adjList.containsKey(v) ? adjList.get(v) : new ArrayList<>();
+            List<Integer> vVertexes = adjListReversed.containsKey(w) ? adjListReversed.get(w) : new ArrayList<>();
             wVertexes.add(w);
+            vVertexes.add(v);
             adjList.put(v, wVertexes);
-        }
-
-        // compute reverse adjList
-        for(int v = 1; v < LIST_SIZE; v++) {
-            if(adjList.containsKey(v)) {
-                for(int w : adjList.get(v)) {
-                    List<Integer> toReplace =  adjListReversed.containsKey(w) ? adjListReversed.get(w) : new ArrayList<>();
-                    toReplace.add(v);
-                    adjListReversed.put(w, toReplace);
-                }
-            }
+            adjListReversed.put(w, vVertexes);
         }
 
         kosaraju(adjList, adjListReversed);
@@ -73,7 +65,7 @@ public class Kosaraju {
 
         for(int i = 1; i < topology.size(); i++) {
             int v = topology.get(i);
-            if (adjList.containsKey(v) && ! /*NOT*/ visited.contains(v)) {
+            if (! /*NOT*/ visited.contains(v)) {
                 numSCC++;
                 DFS_SCC(adjList, v, visited);
             }
@@ -97,7 +89,7 @@ public class Kosaraju {
      }
 
     private static void TopoSort(Map<Integer, List<Integer>> adjList, Set<Integer> visitedReversed) {
-        for(Integer v : adjList.keySet()) {
+        for(int v = 1; v <= LIST_SIZE; v++) {
             // guard
             if(visitedReversed.contains(v)) continue;
 
