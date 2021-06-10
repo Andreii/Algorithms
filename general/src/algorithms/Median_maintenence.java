@@ -9,25 +9,25 @@ import java.util.Scanner;
 public class Median_maintenence {
     public static void main(String[] args) throws FileNotFoundException {
         Scanner in = new Scanner(new File("/home/act/mds/projects/git/algo/general/src/algorithms/Median.txt"));
-        int sum = 0;
         PriorityQueue<Integer> leftQueue = new PriorityQueue<>(Collections.reverseOrder());
         PriorityQueue<Integer> rightQueue = new PriorityQueue<>();
 
-        int k = 1;
+        int sum = 0;
+        int k = 3;
+        int first = in.nextInt();
+        int second = in.nextInt();
+        int min = Math.min(first, second);
+        int max = Math.max(first, second);
+
+        leftQueue.add(min);
+        rightQueue.add(max);
+
+        sum += first + min;
 
         while(in.hasNext()) {
             Integer number = in.nextInt();
 
-            if(leftQueue.isEmpty()) {
-                leftQueue.add(number);
-            } else if (rightQueue.isEmpty()) {
-                rightQueue.add(number);
-                if(leftQueue.peek() > rightQueue.peek()) {
-                    int z = rightQueue.poll();
-                    rightQueue.add(leftQueue.poll());
-                    leftQueue.add(z);
-                }
-            } else if(number < rightQueue.peek()) {
+             if(number < rightQueue.peek()) {
                 leftQueue.add(number);
             } else {
                 rightQueue.add(number);
