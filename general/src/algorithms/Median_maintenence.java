@@ -12,7 +12,7 @@ public class Median_maintenence {
         PriorityQueue<Integer> leftQueue = new PriorityQueue<>(Collections.reverseOrder());
         PriorityQueue<Integer> rightQueue = new PriorityQueue<>();
 
-        int sum = 0;
+        Integer sum = 0;
         int k = 3;
         int first = in.nextInt();
         int second = in.nextInt();
@@ -27,7 +27,8 @@ public class Median_maintenence {
         while(in.hasNext()) {
             Integer number = in.nextInt();
 
-             if(number < rightQueue.peek()) {
+            assert rightQueue.peek() != null;
+            if(number < rightQueue.peek()) {
                 leftQueue.add(number);
             } else {
                 rightQueue.add(number);
@@ -39,9 +40,7 @@ public class Median_maintenence {
                 rightQueue.add(leftQueue.poll());
             }
 
-            if(k % 2 == 0) {
-                sum += leftQueue.peek();
-            } else if (leftQueue.size() > rightQueue.size()) {
+            if(k % 2 == 0 || leftQueue.size() > rightQueue.size()) {
                 sum += leftQueue.peek();
             } else {
                 sum += rightQueue.peek();
