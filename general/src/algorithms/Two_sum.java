@@ -8,6 +8,7 @@ import java.util.TreeSet;
 
 public class Two_sum {
     public static void main(String[] args) throws Exception {
+        // https://stackoverflow.com/questions/28951727/how-can-i-improve-my-2-sum-algorithm-for-a-range-of-numbers-using-a-hash-table
         Scanner in = new Scanner(new File("/home/act/mds/projects/git/algo/general/src/algorithms/2sum_test.txt"));
         Set<Long> set = new HashSet<>();
         Set<Long> sortedSet = new TreeSet<>();
@@ -32,6 +33,13 @@ public class Two_sum {
             index++;
             System.out.printf("At index: %d \n", index);
         }
+
+//        for(int t = 3; t <= 10; t++) {
+//            for(Long x : set) {
+//                if(t-x == x) continue;
+//                if (set.contains(t-x)) { answer++;};
+//            }
+//        }
 
         System.out.printf("Answer is the following: %d", answer);
     }
