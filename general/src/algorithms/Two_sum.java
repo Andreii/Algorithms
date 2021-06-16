@@ -39,8 +39,6 @@ public class Two_sum {
 
             Long[] tArray = Arrays.copyOfRange(sortedArray, startIndex, endIndex);
 
-
-
         }
 
 //        for(int t = 3; t <= 10; t++) {
