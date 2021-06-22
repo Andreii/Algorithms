@@ -5,13 +5,14 @@ import java.util.*;
 
 public class Two_sum {
 
-    private static final int RANGE_LEFT = -3;
-    private static final int RANGE_RIGHT = 10;
+    private static final int RANGE_LEFT = -10000;
+    private static final int RANGE_RIGHT = 10000;
 
 
     public static void main(String[] args) throws Exception {
         // https://stackoverflow.com/questions/28951727/how-can-i-improve-my-2-sum-algorithm-for-a-range-of-numbers-using-a-hash-table
-        Scanner in = new Scanner(new File("/home/act/mds/projects/git/algo/general/src/algorithms/2sum.txt"));
+//        Scanner in = new Scanner(new File("/home/act/mds/projects/git/algo/general/src/algorithms/2sum.txt"));
+        Scanner in = new Scanner(new File("/Users/andrei/IdeaProjects/algo/general/src/algorithms/2sum.txt"));
         Set<Long> set = new HashSet<>();
         Set<Long> sortedSet = new TreeSet<>();
         Set<Long> answerSet = new HashSet<>();
@@ -24,23 +25,24 @@ public class Two_sum {
         }
 
         Long[] sortedArray = sortedSet.toArray(Long[]::new);
-        Map<Integer, Map<Integer, Boolean>> visited = new HashMap<>();
-        int answer = 0, i = 0, j = 0;
-
         for(Long x : set) {
             int startIndex = Arrays.binarySearch(sortedArray, RANGE_LEFT - x),
                 endIndex = Arrays.binarySearch(sortedArray, RANGE_RIGHT - x);
 
             if(startIndex < 0) {
-                startIndex = -startIndex -1;
+                startIndex = -startIndex ;
             }
 
             if(endIndex < 0) {
-                endIndex = -endIndex -1;
+                endIndex = -endIndex ;
             }
 
-            for(Long t : Arrays.copyOfRange(sortedArray, startIndex, endIndex)) {
-                answerSet.add(t);
+            endIndex = Math.min(endIndex, sortedArray.length -1);
+
+            for(int i = startIndex; i <= endIndex; i++) {
+                Long y = sortedArray[i];
+                Long t = x+y;
+                if (!x.equals(y) && t >= RANGE_LEFT && t <= RANGE_RIGHT ) answerSet.add(x+y);
             }
         }
 
