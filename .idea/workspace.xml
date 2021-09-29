@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2c642753-5422-49d6-91b0-0d1c161f501c" name="Default Changelist" comment="Quick sort improvement">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="2c642753-5422-49d6-91b0-0d1c161f501c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/general/src/algorithms/WeightedSum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/general/src/algorithms/jobs.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/src/algorithms/Karatsuba.java" beforeDir="false" afterPath="$PROJECT_DIR$/general/src/algorithms/Karatsuba.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/src/algorithms/Two_sum.java" beforeDir="false" afterPath="$PROJECT_DIR$/general/src/algorithms/Two_sum.java" afterDir="false" />
     </list>
-    <list id="315a3148-9c63-4dfe-8056-b8546a216afd" name="no commit" comment="" />
+    <list id="315a3148-9c63-4dfe-8056-b8546a216afd" name="no commit" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,6 +32,15 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="GithubPullRequestsUISettings">
     <option name="hiddenUrls">
@@ -36,6 +48,37 @@
         <option value="https://github.com/Andreii/algo" />
       </set>
     </option>
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/.idea/workspace.xml">
+      <ranges>
+        <range start1="3" end1="5" start2="3" end2="10" changelist="2c642753-5422-49d6-91b0-0d1c161f501c" />
+        <range start1="6" end1="7" start2="11" end2="11" changelist="2c642753-5422-49d6-91b0-0d1c161f501c" />
+        <range start1="8" end1="9" start2="12" end2="12" changelist="2c642753-5422-49d6-91b0-0d1c161f501c" />
+        <range start1="31" end1="31" start2="34" end2="43" changelist="2c642753-5422-49d6-91b0-0d1c161f501c" />
+        <range start1="38" end1="38" start2="50" end2="81" changelist="2c642753-5422-49d6-91b0-0d1c161f501c" />
+        <range start1="44" end1="44" start2="87" end2="91" changelist="315a3148-9c63-4dfe-8056-b8546a216afd" />
+        <range start1="53" end1="54" start2="100" end2="101" changelist="315a3148-9c63-4dfe-8056-b8546a216afd" />
+        <range start1="64" end1="67" start2="111" end2="114" changelist="315a3148-9c63-4dfe-8056-b8546a216afd" />
+        <range start1="70" end1="71" start2="117" end2="118" changelist="315a3148-9c63-4dfe-8056-b8546a216afd" />
+        <range start1="78" end1="80" start2="125" end2="127" changelist="315a3148-9c63-4dfe-8056-b8546a216afd" />
+        <range start1="83" end1="84" start2="130" end2="131" changelist="315a3148-9c63-4dfe-8056-b8546a216afd" />
+        <range start1="91" end1="93" start2="138" end2="140" changelist="315a3148-9c63-4dfe-8056-b8546a216afd" />
+        <range start1="96" end1="97" start2="143" end2="144" changelist="315a3148-9c63-4dfe-8056-b8546a216afd" />
+        <range start1="104" end1="106" start2="151" end2="153" changelist="315a3148-9c63-4dfe-8056-b8546a216afd" />
+        <range start1="117" end1="120" start2="164" end2="167" changelist="315a3148-9c63-4dfe-8056-b8546a216afd" />
+        <range start1="122" end1="123" start2="169" end2="170" changelist="315a3148-9c63-4dfe-8056-b8546a216afd" />
+        <range start1="132" end1="133" start2="179" end2="182" changelist="315a3148-9c63-4dfe-8056-b8546a216afd" />
+        <range start1="134" end1="136" start2="183" end2="184" changelist="315a3148-9c63-4dfe-8056-b8546a216afd" />
+        <range start1="139" end1="139" start2="187" end2="188" changelist="315a3148-9c63-4dfe-8056-b8546a216afd" />
+        <range start1="229" end1="230" start2="278" end2="335" changelist="2c642753-5422-49d6-91b0-0d1c161f501c" />
+        <range start1="256" end1="257" start2="361" end2="367" changelist="315a3148-9c63-4dfe-8056-b8546a216afd" />
+        <range start1="278" end1="279" start2="388" end2="389" changelist="315a3148-9c63-4dfe-8056-b8546a216afd" />
+        <range start1="281" end1="281" start2="391" end2="396" changelist="315a3148-9c63-4dfe-8056-b8546a216afd" />
+        <range start1="285" end1="285" start2="400" end2="404" changelist="315a3148-9c63-4dfe-8056-b8546a216afd" />
+        <range start1="289" end1="293" start2="408" end2="416" changelist="315a3148-9c63-4dfe-8056-b8546a216afd" />
+      </ranges>
+    </file>
   </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="qoWdIdRK" />
@@ -227,7 +270,63 @@
       <option name="project" value="LOCAL" />
       <updated>1616524499023</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Karatsuba improvement">
+      <created>1620931058218</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1620931058218</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Karatsuba improvement">
+      <created>1620933401636</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1620933401636</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Inversions algorithm">
+      <created>1621059839173</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1621059839173</updated>
+    </task>
+    <task id="LOCAL-00014" summary="QuickSort algorithm">
+      <created>1621079142220</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1621079142220</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Kosaraju">
+      <created>1622495729112</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1622495729112</updated>
+    </task>
+    <task id="LOCAL-00016" summary="2sum">
+      <created>1624336863820</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1624336863820</updated>
+    </task>
+    <task id="LOCAL-00017" summary="2sum">
+      <created>1624337553420</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1624337553421</updated>
+    </task>
+    <task id="LOCAL-00018" summary="2sum">
+      <created>1624338792331</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1624338792331</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
