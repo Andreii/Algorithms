@@ -10,11 +10,7 @@ public class WeightedSum {
 
         Scanner scanner = new Scanner(file);
 
-        Integer count = Integer.valueOf(scanner.nextLine());
-
-        TreeMap<Integer, SortedSet<Integer>> job_dif = new TreeMap<>(Collections.reverseOrder());
-
-        List<List<Integer>> job_diff = new ArrayList<>();
+        TreeMap<Integer, SortedSet<List<Integer>>> job_dif = new TreeMap<>(Collections.reverseOrder());
 
         while(scanner.hasNext()) {
             String[] props = scanner.nextLine().split(" ");
@@ -23,21 +19,31 @@ public class WeightedSum {
             Integer diff = job_weight - job_length;
 
             if(job_dif.containsKey(diff)) {
-                SortedSet<Integer> value = job_dif.get(diff);
-                value.add(job_weight);
-                job_dif.put(diff, value);
+                SortedSet<List<Integer>> value = job_dif.get(diff);
+                value.add( new ArrayList<>() {{ add(job_weight); add(job_length); }});
             } else {
-                job_dif.put(diff, new TreeSet<>(Collections.reverseOrder()) {{ add( job_weight); }});
+                job_dif.put(diff, new TreeSet<>(new Comparator<List<Integer>>() {
+                    @Override
+                    public int compare(List<Integer> o1, List<Integer> o2) {
+                        return o2.get(0) - o1.get(0);
+                    }
+                }) {{
+                    add( new ArrayList<>() {{ add(job_weight); add(job_length); }} );
+                }});
             }
         }
 
         Long result = 0L;
+        Long time = 0L;
 
-        for(Map.Entry<Integer, SortedSet<Integer>> entry : job_dif.entrySet()) {
-
-            for(Integer v : entry.getValue()) {
-                result += entry.getKey() * v;
+        for(Map.Entry<Integer, SortedSet<List<Integer>>> entry : job_dif.entrySet()) {
+            System.out.print(entry.getKey());
+            for(List<Integer> v : entry.getValue()) {
+                System.out.print(v);
+                time += v.get(1);
+                result += v.get(0) * time;
             }
+            System.out.println();
         }
 
         System.out.println("Result is: " + result);
