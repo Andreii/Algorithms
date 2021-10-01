@@ -6,11 +6,13 @@ import java.util.*;
 
 public class WeightedSum {
     public static void main(String[] args) throws FileNotFoundException {
-        File file = new File("/Users/andrei/IdeaProjects/algo/general/src/algorithms/jobs.txt");
+        File file = new File("/Users/andrei/IdeaProjects/algo/general/src/algorithms/jobs_small.txt");
 
         Scanner scanner = new Scanner(file);
 
         TreeMap<Integer, SortedSet<List<Integer>>> job_dif = new TreeMap<>(Collections.reverseOrder());
+
+        Integer count = Integer.valueOf(scanner.nextLine());
 
         while(scanner.hasNext()) {
             String[] props = scanner.nextLine().split(" ");
