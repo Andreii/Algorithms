@@ -10,7 +10,7 @@ public class WeightedSum {
 
         Scanner scanner = new Scanner(file);
 
-        TreeMap<Integer, ArrayList<ArrayList<Integer>>> job_dif = new TreeMap<>(Collections.reverseOrder());
+        TreeMap<Float, ArrayList<ArrayList<Integer>>> job_dif = new TreeMap<>(Collections.reverseOrder());
 
         Integer count = Integer.valueOf(scanner.nextLine());
 
@@ -18,7 +18,7 @@ public class WeightedSum {
             String[] props = scanner.nextLine().split(" ");
             Integer job_weight = Integer.parseInt(props[0]);
             Integer job_length = Integer.parseInt(props[1]);
-            Integer diff = job_weight - job_length;
+            Float diff = (float) job_weight / job_length;
 
             if(job_dif.containsKey(diff)) {
                 ArrayList<ArrayList<Integer>> value = job_dif.get(diff);
@@ -34,7 +34,7 @@ public class WeightedSum {
         Long time = 0L;
         int result_count = 0;
 
-        for(Map.Entry<Integer, ArrayList<ArrayList<Integer>>> entry : job_dif.entrySet()) {
+        for(Map.Entry<Float, ArrayList<ArrayList<Integer>>> entry : job_dif.entrySet()) {
             System.out.print(entry.getKey());
             ArrayList<ArrayList<Integer>> list_to_process = entry.getValue();
             list_to_process.sort(new Comparator<ArrayList<Integer>>() {
