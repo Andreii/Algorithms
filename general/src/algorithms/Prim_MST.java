@@ -13,7 +13,7 @@ public class Prim_MST {
 
         ArrayList<ArrayList<Integer>> edgesList = new ArrayList<>();
         try {
-            scanner = new Scanner(new File("/Users/andrei/IdeaProjects/algo/general/src/algorithms/edges.txt"));
+            scanner = new Scanner(new File("general/src/algorithms/edges.txt"));
         } catch (FileNotFoundException e) {
             System.out.println("File could not be opened!");
         }
@@ -35,7 +35,7 @@ public class Prim_MST {
 
         int index = 0;
         for( ArrayList<Integer> edge : edgesList) {
-            System.out.printf(" Edge %d - start %d - end %d - cost %d \n", index++, edge.get(0), edge.get(1), edge.get(2));
+//            System.out.printf(" Edge %d - start %d - end %d - cost %d \n", index++, edge.get(0), edge.get(1), edge.get(2));
         }
     }
 }
