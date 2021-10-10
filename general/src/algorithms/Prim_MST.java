@@ -5,6 +5,16 @@ import java.io.FileNotFoundException;
 import java.util.*;
 
 public class Prim_MST {
+
+    class Vertex {
+        int node;
+        int cost;
+        boolean visited = false;
+        Vertex(int node, int cost) {
+            this.node = node;
+            this.cost = cost;
+        }
+    }
     public static void main(String[] args) {
 
         Scanner scanner = null;
@@ -48,24 +58,15 @@ public class Prim_MST {
         List<List<Integer>> T = new ArrayList<>();
         Set<Integer> visited = new HashSet<>();
 
-        for(Integer v : X) {
-            int minvw = Integer.MAX_VALUE;
-            int minv = 0;
-            int minw = 0;
-            for(Integer w : adj_list.get(v)) {
-                if ( ! /* NOT */ visited.contains(v) ) {
-                    if(minvw < costs.get(v + "_" + w)) {
-                        minvw = costs.get(v + "_" + w);
-                        minv = v;
-                        minw = w;
-                    }
-                }
+        PriorityQueue<Vertex> tree = new PriorityQueue<>(new Comparator<Vertex>() {
+            @Override
+            public int compare(Vertex o1, Vertex o2) {
+                return o1.cost - o2.cost;
             }
-            X.add(minw);
-            List<Integer> edge = new ArrayList<>();
-            edge.add(minv);
-            edge.add(minw);
-            T.add(edge);
+        });
+
+        while( ! /*NOT*/ tree.isEmpty()) {
+
         }
 
         int index = 0;
