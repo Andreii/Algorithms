@@ -38,6 +38,8 @@ public class Prim_MST {
         while(scanner.hasNext()) {
             String[] line = scanner.nextLine().split(" ");
             costs.put(line[0] + "_" + line[1], Integer.parseInt(line[2]));
+            costs.put(line[1] + "_" + line[0], Integer.parseInt(line[2]));
+
             edgesList.add(new ArrayList<>() {{
                 add(Integer.parseInt(line[0]));
                 add(Integer.parseInt(line[1]));
@@ -52,11 +54,18 @@ public class Prim_MST {
             } else {
                 adj_list.put(start, new ArrayList<>() {{ add(end);}});
             }
+
+            if(adj_list.containsKey(end)) {
+                List<Integer> list = adj_list.get(end);
+                list.add(start);
+            } else {
+                adj_list.put(end, new ArrayList<>() {{ add(start);}});
+            }
         }
 
         List<Integer> X = new ArrayList<>() {{ add(adj_list.keySet().stream().findFirst().get()); }};
         List<List<Integer>> T = new ArrayList<>();
-        boolean[] visited = new boolean[adj_list.size()];
+        boolean[] visited = new boolean[adj_list.size() + 2];
 
         Arrays.fill(visited, false);
 
@@ -70,30 +79,36 @@ public class Prim_MST {
         int mst_cost = 0;
         tree.add(new Vertex(adj_list.keySet().stream().findFirst().get(), 0));
 
-        while( ! /*NOT*/ tree.isEmpty()) {
-            Vertex current_vertex = tree.peek();
-            tree.remove();
+//        1 2 1
+//        2 4 2
+//        3 1 4
+//        4 3 5
+//        4 1 3
+
+        while( ! /*NOT*/ tree.isEmpty()) { //  1_4
+            Vertex current_vertex = tree.remove();
 
             if(! /*NOT*/ visited[current_vertex.node]) {
-                mst_cost += current_vertex.cost;
-                visited[current_vertex.node] = true;
-                for(Integer v_node : adj_list.get(current_vertex.node)) {
+                mst_cost += current_vertex.cost; // 0 4
+                visited[current_vertex.node] = true; // v[1] v[2]
+                if (adj_list.get(current_vertex.node) == null) continue;
+                for(Integer v_node : adj_list.get(current_vertex.node)) { //
                     if(! /*NOT*/ visited[v_node]) {
-                        visited[v_node] = true;
+                        System.out.println("got  cost " + current_vertex.node + " - " + v_node + " -> " + costs.get(current_vertex.node + "_" + v_node) + " cost_mst: " + mst_cost  );
                         tree.add(new Vertex(v_node, costs.get(current_vertex.node + "_" + v_node)));
                     }
                 }
             }
         }
 
-        int index = 0;
-        for( ArrayList<Integer> edge : edgesList) {
-            System.out.printf(" Edge %d - start %d - end %d - cost %d \n", index++, edge.get(0), edge.get(1), edge.get(2));
-        }
-
-        for( Map.Entry<Integer, List<Integer>> entry : adj_list.entrySet()) {
-            System.out.printf(" start %d -> %s \n", entry.getKey(), entry.getValue().toString());
-        }
+//        int index = 0;
+//        for( ArrayList<Integer> edge : edgesList) {
+//            System.out.printf(" Edge %d - start %d - end %d - cost %d \n", index++, edge.get(0), edge.get(1), edge.get(2));
+//        }
+//
+//        for( Map.Entry<Integer, List<Integer>> entry : adj_list.entrySet()) {
+//            System.out.printf(" start %d -> %s \n", entry.getKey(), entry.getValue().toString());
+//        }
 
         System.out.println("Total cost is: " + mst_cost);
     }
