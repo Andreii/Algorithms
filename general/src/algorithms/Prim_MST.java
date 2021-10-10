@@ -6,7 +6,7 @@ import java.util.*;
 
 public class Prim_MST {
 
-    class Vertex {
+    static class Vertex {
         int node;
         int cost;
         boolean visited = false;
@@ -56,7 +56,9 @@ public class Prim_MST {
 
         List<Integer> X = new ArrayList<>() {{ add(adj_list.keySet().stream().findFirst().get()); }};
         List<List<Integer>> T = new ArrayList<>();
-        Set<Integer> visited = new HashSet<>();
+        boolean[] visited = new boolean[adj_list.size()];
+
+        Arrays.fill(visited, false);
 
         PriorityQueue<Vertex> tree = new PriorityQueue<>(new Comparator<Vertex>() {
             @Override
@@ -65,8 +67,23 @@ public class Prim_MST {
             }
         });
 
-        while( ! /*NOT*/ tree.isEmpty()) {
+        int mst_cost = 0;
+        tree.add(new Vertex(adj_list.keySet().stream().findFirst().get(), 0));
 
+        while( ! /*NOT*/ tree.isEmpty()) {
+            Vertex current_vertex = tree.peek();
+            tree.remove();
+
+            if(! /*NOT*/ visited[current_vertex.node]) {
+                mst_cost += current_vertex.cost;
+                visited[current_vertex.node] = true;
+                for(Integer v_node : adj_list.get(current_vertex.node)) {
+                    if(! /*NOT*/ visited[v_node]) {
+                        visited[v_node] = true;
+                        tree.add(new Vertex(v_node, costs.get(current_vertex.node + "_" + v_node)));
+                    }
+                }
+            }
         }
 
         int index = 0;
@@ -78,6 +95,6 @@ public class Prim_MST {
             System.out.printf(" start %d -> %s \n", entry.getKey(), entry.getValue().toString());
         }
 
-        System.out.println(T);
+        System.out.println("Total cost is: " + mst_cost);
     }
 }
