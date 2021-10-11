@@ -54,31 +54,29 @@ public class Prim_MST {
             }
         }
 
-        boolean[] visited = new boolean[adj_list.size() + 2];
-
+        boolean[] visited = new boolean[adj_list.size() + 5];
         Arrays.fill(visited, false);
 
         PriorityQueue<Vertex> tree = new PriorityQueue<>(new Comparator<Vertex>() {
             @Override
-            public int compare(Vertex o1, Vertex o2) {
-                return o1.cost - o2.cost;
+            public int compare(Vertex v1, Vertex v2) {
+                return v1.cost - v2.cost;
             }
-        });
+        }) {{
+            add(new Vertex(adj_list.keySet().stream().findFirst().get(), 0));
+        }};
 
         int mst_cost = 0;
-        tree.add(new Vertex(adj_list.keySet().stream().findFirst().get(), 0));
 
-        while( ! /*NOT*/ tree.isEmpty()) { //  1_4
-            Vertex current_vertex = tree.remove();
+        while( ! /*NOT*/ tree.isEmpty()) {
+            Vertex v = tree.remove();
 
-            if(! /*NOT*/ visited[current_vertex.node]) {
-                mst_cost += current_vertex.cost; // 0 4
-                visited[current_vertex.node] = true; // v[1] v[2]
-                if (adj_list.get(current_vertex.node) == null) continue;
-                for(Integer v_node : adj_list.get(current_vertex.node)) { //
-                    if(! /*NOT*/ visited[v_node]) {
-//                        System.out.println("got  cost " + current_vertex.node + " - " + v_node + " -> " + costs.get(current_vertex.node + "_" + v_node) + " cost_mst: " + mst_cost  );
-                        tree.add(new Vertex(v_node, costs.get(current_vertex.node + "_" + v_node)));
+            if( !/*NOT*/ visited[v.node]) {
+                visited[v.node] = true;
+                mst_cost += v.cost;
+                for(Integer adjacent : adj_list.get(v.node)) {
+                    if( !/*NOT*/ visited[adjacent] ) {
+                        tree.add(new Vertex(adjacent, costs.get(v.node + "_" + adjacent)));
                     }
                 }
             }
