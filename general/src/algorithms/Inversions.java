@@ -9,7 +9,7 @@ public class Inversions {
     public static int inversions = 0;
 
     public static void main(String[] args) throws IOException {
-        BufferedReader bufferedReader = new BufferedReader(new FileReader("/Users/andrei/IdeaProjects/algo/general/src/algorithms/IntegerArray.txt"));
+        BufferedReader bufferedReader = new BufferedReader(new FileReader("general/resources/IntegerArray.txt"));
         List<Integer> numbers = new ArrayList<>(100000);
         String line = bufferedReader.readLine();
 

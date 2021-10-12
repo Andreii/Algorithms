@@ -24,7 +24,7 @@ public class Kosaraju {
         Map<Integer, List<Integer>> adjList = new HashMap<>(LIST_SIZE);
         Map<Integer, List<Integer>> adjListReversed = new HashMap<>(LIST_SIZE);
 
-        Scanner in = new Scanner(new File("//Users/andrei/IdeaProjects/algo/general/src/algorithms/SCC_test_5.txt"));
+        Scanner in = new Scanner(new File("general/resources/SCC_test_5.txt"));
 
         for(int i = 0; i <= LIST_SIZE; i++) {
             topology.add(-1);

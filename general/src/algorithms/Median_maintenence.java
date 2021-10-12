@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class Median_maintenence {
     public static void main(String[] args) throws FileNotFoundException {
-        Scanner in = new Scanner(new File("/home/act/mds/projects/git/algo/general/src/algorithms/Median.txt"));
+        Scanner in = new Scanner(new File("general/resources/Median.txt"));
         PriorityQueue<Integer> leftQueue = new PriorityQueue<>(Collections.reverseOrder());
         PriorityQueue<Integer> rightQueue = new PriorityQueue<>();
 

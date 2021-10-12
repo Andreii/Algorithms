@@ -9,7 +9,7 @@ public class QuickSort {
     private static int switches = 0;
 
     public static void main(String[] args) throws IOException {
-        BufferedReader bufferedReader = new BufferedReader(new FileReader("/Users/andrei/IdeaProjects/algo/general/src/algorithms/1_QuickSort.txt"));
+        BufferedReader bufferedReader = new BufferedReader(new FileReader("general/resources/1_QuickSort.txt"));
 
         int[] arrToSort = new int[10_000];
         List<Integer> arrList = new ArrayList<>(10_000);

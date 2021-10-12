@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 
 public class Dijkstra {
     public static void main(String[] args) throws FileNotFoundException {
-        Scanner in = new Scanner(new File("general/src/algorithms/dijkstra.txt"));
+        Scanner in = new Scanner(new File("general/resources/dijkstra.txt"));
         Map<Integer, List<Integer>> adjList = new HashMap<>();
         Map<String,Integer> lenvw = new HashMap<>();
 

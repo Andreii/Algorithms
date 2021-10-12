@@ -6,7 +6,7 @@ import java.util.*;
 
 public class WeightedSum {
     public static void main(String[] args) throws FileNotFoundException {
-        File file = new File("/Users/andrei/IdeaProjects/algo/general/src/algorithms/jobs.txt");
+        File file = new File("general/resources/jobs.txt");
 
         Scanner scanner = new Scanner(file);
 

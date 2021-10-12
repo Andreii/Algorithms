@@ -9,7 +9,7 @@ public class MinCut_Good {
         int trial = (int)Math.round(n * (n - 1) / 2 * Math.log(n));
         int kargerMinCut = 2147483647;
         for (int k = 0; k < trial; k++){
-            Scanner in = new Scanner(new File("/home/act/mds/projects/git/algo/general/src/algorithms/kargerMinCut.txt"));
+            Scanner in = new Scanner(new File("general/resources/kargerMinCut.txt"));
             Map<Integer,List<Integer>> adj = new HashMap<Integer,List<Integer>>();
             for (int i = 1; i <= n; i++){
                 String[] line = in.nextLine().split("\\s+");

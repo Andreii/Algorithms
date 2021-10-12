@@ -9,7 +9,6 @@ public class Prim_MST {
     static class Vertex {
         int node;
         int cost;
-        boolean visited = false;
         Vertex(int node, int cost) {
             this.node = node;
             this.cost = cost;
@@ -22,7 +21,7 @@ public class Prim_MST {
         Map<String, Integer> costs = new HashMap<>();
 
         try {
-            scanner = new Scanner(new File("general/src/algorithms/edges.txt"));
+            scanner = new Scanner(new File("general/resources/edges.txt"));
         } catch (FileNotFoundException e) {
             System.out.println("File could not be opened!");
         }
