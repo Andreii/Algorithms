@@ -31,74 +31,40 @@ import java.util.*;
  * ADVICE: If you're not getting the correct answer, try debugging your algorithm using some small test cases. And then post them to the discussion forum!
  */
 public class Knapsack_big {
-    static class Item {
-        int value, weight;
-        Item(int value, int weight) {
-            this.value = value;
-            this.weight = weight;
+
+    private static int knapsack(int weight, int[] values, int count, int[] weights) {
+
+        if(weight == 0 || count == 0) return 0;
+        if(weights[count - 1] > weight) {
+            return knapsack(weight, values, count - 1, weights);
+        } else {
+            return Math.max(
+                    knapsack(weight, values, count - 1, weights ),
+                    knapsack(weight - weights[ count - 1], values, count - 1, weights)
+            );
         }
     }
 
-   public static class Triple<T, U, V> {
-        private final T first;
-        private final U second;
-        private final V third;
+    public static void main (String[] args) throws Exception {
+        Scanner scanner = new Scanner(new File("general/resources/knapsack_big.txt"));
 
-        public Triple(T first, U second, V third) {
-            this.first = first;
-            this.second = second;
-            this.third = third;
+        String[] line = scanner.nextLine().split(" ");
+        int C = Integer.parseInt(line[0]);
+        int item_count = Integer.parseInt(line[1]);
+
+        List<Integer> values = new ArrayList<>(item_count);
+        List<Integer> weights = new ArrayList<>(item_count);
+
+        while(scanner.hasNext()) {
+            String[] current_line = scanner.nextLine().split(" ");
+            values.add(Integer.parseInt(current_line[0]));
+            weights.add(Integer.parseInt(current_line[1]));
         }
 
-
-       public T getFirst() {
-           return first;
-       }
-
-       public U getSecond() {
-           return second;
-       }
-
-       public V getThird() {
-           return third;
-       }
-   }
-
-    public static void main (String[] args) {
-        try {
-            Scanner scanner = new Scanner(new File("general/resources/knapsack_big.txt"));
-            String[] firstLine = scanner.nextLine().split(" ");
-            int C = Integer.parseInt(firstLine[0]);
-            int item_count = Integer.parseInt(firstLine[1]);
-            Item[] items = new Item[item_count+1];
-
-            int item_index = 1;
-            while(scanner.hasNext()) {
-                String[] line = scanner.nextLine().split(" ");
-                items[item_index++] = new Item(Integer.parseInt(line[0]), Integer.parseInt(line[1]));
-            }
-
-            for(int i = 1; i <= item_count; i++) {
-                Item item = items[i];
-                System.out.printf("Item [%d] has value [%d] and weight [%d]\n",i,item.value, item.weight);
-            }
-            Map<String, Integer> cache = new HashMap<>();
-            Long result = knapsack(0,0, item_count, C, items, cache);
-
-            System.out.println("Solution is: " + result);
-
-        } catch(FileNotFoundException e) { /* ignore */ }
-    }
-
-    public static long knapsack(int i, int x, int item_count, int C, Item[] items, Map<String, Integer> cache) {
-        Item item = items[i];
-
-
-
-        if(item.weight > C) {
-
-        }
-
-        return knapsack(++i, ++x, item_count, C, items, cache);
+        System.out.println("Knapsack value is: " + knapsack(C,
+                values.stream().mapToInt(i -> i).toArray(),
+                item_count,
+                weights.stream().mapToInt(i -> i).toArray()
+        ));
     }
 }

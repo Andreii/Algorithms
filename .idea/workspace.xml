@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2c642753-5422-49d6-91b0-0d1c161f501c" name="Default Changelist" comment="clustering">
+    <list default="true" id="2c642753-5422-49d6-91b0-0d1c161f501c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/general/src/algorithms/Clustering.java" beforeDir="false" afterPath="$PROJECT_DIR$/general/src/algorithms/Clustering.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/src/algorithms/Knapsack.java" beforeDir="false" afterPath="$PROJECT_DIR$/general/src/algorithms/Knapsack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/general/src/algorithms/Knapsack_big.java" beforeDir="false" afterPath="$PROJECT_DIR$/general/src/algorithms/Knapsack_big.java" afterDir="false" />
     </list>
     <list id="315a3148-9c63-4dfe-8056-b8546a216afd" name="no commit" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -30,7 +31,18 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="KEEP" />
     <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitRewordedCommitMessages">
+    <option name="commitMessagesMapping">
+      <RewordedCommitMessageMapping>
+        <option name="originalMessage" value="clustering" />
+        <option name="rewordedMessage" value="clustering" />
+      </RewordedCommitMessageMapping>
+    </option>
+    <option name="currentCommit" value="1" />
+    <option name="onto" value="8ee7debcfae8fd210569ca4407e66fba9a42cf2f" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -47,31 +59,41 @@
       </set>
     </option>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/general/resources/clustering_binary_small.txt" root0="FORCE_HIGHLIGHTING" />
+    <setting file="jrt:///home/act/mds/install/idea-IU-183.5429.30/jbr!/java.base/java/util/List.class" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/general/src/data_structures/bitset.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="jrt:///home/act/mds/install/idea-IU-183.5429.30/jbr!/java.base/java/util/Collections.class" root0="SKIP_INSPECTION" />
+    <setting file="jrt:///home/act/mds/install/idea-IU-183.5429.30/jbr!/java.base/jdk/internal/util/Preconditions.class" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/general/src/algorithms/Clustering.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="jrt:///home/act/mds/install/idea-IU-183.5429.30/jbr!/java.base/java/util/Objects.class" root0="SKIP_INSPECTION" />
+    <setting file="jrt:///home/act/mds/install/idea-IU-183.5429.30/jbr!/java.base/java/util/ArrayList.class" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/general/src/algorithms/Clustering_big.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="LineStatusTrackerManager">
     <file path="$PROJECT_DIR$/.idea/workspace.xml">
       <ranges>
-        <range start1="4" end1="6" start2="4" end2="4" changelist="2c642753-5422-49d6-91b0-0d1c161f501c" />
-        <range start1="7" end1="8" start2="5" end2="6" changelist="2c642753-5422-49d6-91b0-0d1c161f501c" />
-        <range start1="54" end1="79" start2="52" end2="74" changelist="2c642753-5422-49d6-91b0-0d1c161f501c" />
-        <range start1="87" end1="87" start2="82" end2="86" changelist="2c642753-5422-49d6-91b0-0d1c161f501c" />
-        <range start1="96" end1="97" start2="95" end2="101" changelist="2c642753-5422-49d6-91b0-0d1c161f501c" />
-        <range start1="107" end1="110" start2="111" end2="114" changelist="2c642753-5422-49d6-91b0-0d1c161f501c" />
-        <range start1="113" end1="114" start2="117" end2="118" changelist="2c642753-5422-49d6-91b0-0d1c161f501c" />
-        <range start1="121" end1="123" start2="125" end2="127" changelist="2c642753-5422-49d6-91b0-0d1c161f501c" />
-        <range start1="126" end1="127" start2="130" end2="131" changelist="2c642753-5422-49d6-91b0-0d1c161f501c" />
-        <range start1="134" end1="136" start2="138" end2="140" changelist="2c642753-5422-49d6-91b0-0d1c161f501c" />
-        <range start1="139" end1="140" start2="143" end2="144" changelist="2c642753-5422-49d6-91b0-0d1c161f501c" />
-        <range start1="147" end1="149" start2="151" end2="153" changelist="2c642753-5422-49d6-91b0-0d1c161f501c" />
-        <range start1="160" end1="163" start2="164" end2="167" changelist="2c642753-5422-49d6-91b0-0d1c161f501c" />
-        <range start1="165" end1="166" start2="169" end2="170" changelist="2c642753-5422-49d6-91b0-0d1c161f501c" />
-        <range start1="175" end1="179" start2="179" end2="184" changelist="2c642753-5422-49d6-91b0-0d1c161f501c" />
-        <range start1="182" end1="182" start2="187" end2="188" changelist="2c642753-5422-49d6-91b0-0d1c161f501c" />
-        <range start1="328" end1="329" start2="334" end2="461" changelist="2c642753-5422-49d6-91b0-0d1c161f501c" />
-        <range start1="355" end1="356" start2="487" end2="497" changelist="2c642753-5422-49d6-91b0-0d1c161f501c" />
-        <range start1="377" end1="378" start2="518" end2="519" changelist="2c642753-5422-49d6-91b0-0d1c161f501c" />
-        <range start1="380" end1="380" start2="521" end2="536" changelist="2c642753-5422-49d6-91b0-0d1c161f501c" />
-        <range start1="383" end1="383" start2="539" end2="547" changelist="315a3148-9c63-4dfe-8056-b8546a216afd" />
-        <range start1="388" end1="392" start2="552" end2="556" changelist="315a3148-9c63-4dfe-8056-b8546a216afd" />
+        <range start1="3" end1="4" start2="3" end2="4" changelist="2c642753-5422-49d6-91b0-0d1c161f501c" />
+        <range start1="5" end1="6" start2="5" end2="7" changelist="2c642753-5422-49d6-91b0-0d1c161f501c" />
+        <range start1="32" end1="32" start2="33" end2="34" changelist="2c642753-5422-49d6-91b0-0d1c161f501c" />
+        <range start1="33" end1="33" start2="35" end2="45" changelist="2c642753-5422-49d6-91b0-0d1c161f501c" />
+        <range start1="48" end1="48" start2="60" end2="71" changelist="2c642753-5422-49d6-91b0-0d1c161f501c" />
+        <range start1="52" end1="74" start2="75" end2="97" changelist="2c642753-5422-49d6-91b0-0d1c161f501c" />
+        <range start1="87" end1="87" start2="110" end2="112" changelist="2c642753-5422-49d6-91b0-0d1c161f501c" />
+        <range start1="90" end1="91" start2="115" end2="116" changelist="2c642753-5422-49d6-91b0-0d1c161f501c" />
+        <range start1="98" end1="98" start2="123" end2="126" changelist="2c642753-5422-49d6-91b0-0d1c161f501c" />
+        <range start1="111" end1="114" start2="139" end2="142" changelist="2c642753-5422-49d6-91b0-0d1c161f501c" />
+        <range start1="125" end1="127" start2="153" end2="155" changelist="2c642753-5422-49d6-91b0-0d1c161f501c" />
+        <range start1="138" end1="140" start2="166" end2="168" changelist="2c642753-5422-49d6-91b0-0d1c161f501c" />
+        <range start1="151" end1="153" start2="179" end2="181" changelist="2c642753-5422-49d6-91b0-0d1c161f501c" />
+        <range start1="164" end1="166" start2="192" end2="194" changelist="2c642753-5422-49d6-91b0-0d1c161f501c" />
+        <range start1="177" end1="177" start2="205" end2="225" changelist="2c642753-5422-49d6-91b0-0d1c161f501c" />
+        <range start1="179" end1="184" start2="227" end2="232" changelist="2c642753-5422-49d6-91b0-0d1c161f501c" />
+        <range start1="207" end1="298" start2="255" end2="271" changelist="2c642753-5422-49d6-91b0-0d1c161f501c" />
+        <range start1="460" end1="461" start2="433" end2="616" changelist="2c642753-5422-49d6-91b0-0d1c161f501c" />
+        <range start1="464" end1="465" start2="619" end2="620" changelist="315a3148-9c63-4dfe-8056-b8546a216afd" />
+        <range start1="496" end1="497" start2="651" end2="653" changelist="2c642753-5422-49d6-91b0-0d1c161f501c" />
+        <range start1="553" end1="553" start2="709" end2="712" changelist="315a3148-9c63-4dfe-8056-b8546a216afd" />
       </ranges>
     </file>
   </component>
@@ -85,10 +107,12 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/CtCI/CtCI.iml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/general/resources" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -96,6 +120,9 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/general/resources" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/general/resources" />
     </key>
@@ -109,9 +136,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Clustering">
-    <configuration name="Clustering" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="algorithms.Clustering" />
+  <component name="RunManager" selected="Application.Knapsack_big">
+    <configuration name="Clustering_big" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="algorithms.Clustering_big" />
       <module name="general" />
       <extension name="coverage">
         <pattern>
@@ -123,8 +150,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Inversions" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="algorithms.Inversions" />
+    <configuration name="Huffman" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="algorithms.Huffman" />
       <module name="general" />
       <extension name="coverage">
         <pattern>
@@ -136,8 +163,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Kosaraju" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="algorithms.Kosaraju" />
+    <configuration name="Knapsack" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="algorithms.Knapsack" />
       <module name="general" />
       <extension name="coverage">
         <pattern>
@@ -149,8 +176,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Median_maintenence" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="algorithms.Median_maintenence" />
+    <configuration name="Knapsack_big" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="algorithms.Knapsack_big" />
       <module name="general" />
       <extension name="coverage">
         <pattern>
@@ -162,8 +189,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WeightedSum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="algorithms.WeightedSum" />
+    <configuration name="MWIS" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="algorithms.MWIS" />
       <module name="general" />
       <extension name="coverage">
         <pattern>
@@ -175,13 +202,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Clustering_big" />
+      <item itemvalue="Application.Huffman" />
+      <item itemvalue="Application.MWIS" />
+      <item itemvalue="Application.Knapsack" />
+      <item itemvalue="Application.Knapsack_big" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Clustering" />
-        <item itemvalue="Application.Inversions" />
-        <item itemvalue="Application.WeightedSum" />
-        <item itemvalue="Application.Median_maintenence" />
-        <item itemvalue="Application.Kosaraju" />
+        <item itemvalue="Application.Knapsack_big" />
+        <item itemvalue="Application.Knapsack" />
+        <item itemvalue="Application.MWIS" />
+        <item itemvalue="Application.Huffman" />
+        <item itemvalue="Application.Clustering_big" />
       </list>
     </recent_temporary>
   </component>
@@ -205,97 +252,22 @@
       <workItem from="1611559066216" duration="57000" />
       <workItem from="1616422533167" duration="4084000" />
       <workItem from="1616502752916" duration="1696000" />
-    </task>
-    <task id="LOCAL-00001" summary="test">
-      <created>1611082171283</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1611082171283</updated>
-    </task>
-    <task id="LOCAL-00002" summary="test">
-      <created>1611082182097</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1611082182097</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Better project structure">
-      <created>1611082322955</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1611082322955</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Better project structure">
-      <created>1611086550994</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1611086550994</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Better project structure">
-      <created>1613906839254</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1613906839254</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Karatsuba multiplication divide-and-conquer">
-      <created>1615630764419</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1615630764419</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Bitsets">
-      <created>1615805282569</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1615805282569</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Refactor">
-      <created>1615805391524</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1615805391524</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Refactor">
-      <created>1615810977485</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1615810977485</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Quick sort improvement">
-      <created>1616524499023</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1616524499023</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Karatsuba improvement">
-      <created>1620931058218</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1620931058218</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Karatsuba improvement">
-      <created>1620933401636</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1620933401636</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Inversions algorithm">
-      <created>1621059839173</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1621059839173</updated>
+      <workItem from="1634929355414" duration="9232000" />
+      <workItem from="1634983357080" duration="1736000" />
+      <workItem from="1636448298515" duration="603000" />
+      <workItem from="1636579316810" duration="2467000" />
+      <workItem from="1636635808693" duration="441000" />
+      <workItem from="1636757455057" duration="1702000" />
+      <workItem from="1636927907955" duration="1715000" />
+      <workItem from="1637080926817" duration="2128000" />
+      <workItem from="1637186548435" duration="2450000" />
+      <workItem from="1637264288448" duration="7614000" />
+      <workItem from="1637652674578" duration="515000" />
+      <workItem from="1637658198570" duration="599000" />
+      <workItem from="1637661106309" duration="7000" />
+      <workItem from="1637747148717" duration="608000" />
+      <workItem from="1642625086049" duration="2297000" />
+      <workItem from="1642687898837" duration="7157000" />
     </task>
     <task id="LOCAL-00014" summary="QuickSort algorithm">
       <created>1621079142220</created>
@@ -458,11 +430,193 @@
       <option name="project" value="LOCAL" />
       <updated>1634370548551</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="clustering">
+      <created>1634591435271</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1634591435271</updated>
+    </task>
+    <task id="LOCAL-00038" summary="clustering">
+      <created>1634938350667</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1634938350667</updated>
+    </task>
+    <task id="LOCAL-00039" summary="clustering">
+      <created>1634939206138</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1634939206138</updated>
+    </task>
+    <task id="LOCAL-00040" summary="clustering">
+      <created>1634939610173</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1634939610173</updated>
+    </task>
+    <task id="LOCAL-00041" summary="huffman">
+      <created>1636579373524</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1636579373524</updated>
+    </task>
+    <task id="LOCAL-00042" summary="huffman">
+      <created>1636579638144</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1636579638144</updated>
+    </task>
+    <task id="LOCAL-00043" summary="huffman">
+      <created>1636636203460</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1636636203460</updated>
+    </task>
+    <task id="LOCAL-00044" summary="huffman">
+      <created>1636757567615</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1636757567615</updated>
+    </task>
+    <task id="LOCAL-00045" summary="huffman">
+      <created>1636827736335</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1636827736335</updated>
+    </task>
+    <task id="LOCAL-00046" summary="huffman">
+      <created>1636927829135</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1636927829135</updated>
+    </task>
+    <task id="LOCAL-00047" summary="huffman">
+      <created>1636968113053</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1636968113053</updated>
+    </task>
+    <task id="LOCAL-00048" summary="huffman">
+      <created>1637081501574</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1637081501574</updated>
+    </task>
+    <task id="LOCAL-00049" summary="huffman">
+      <created>1637081561390</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1637081561390</updated>
+    </task>
+    <task id="LOCAL-00050" summary="huffman">
+      <created>1637082089297</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1637082089297</updated>
+    </task>
+    <task id="LOCAL-00051" summary="huffman">
+      <created>1637083647337</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1637083647337</updated>
+    </task>
+    <task id="LOCAL-00052" summary="huffman">
+      <created>1637187002061</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1637187002061</updated>
+    </task>
+    <task id="LOCAL-00053" summary="huffman">
+      <created>1637222679678</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1637222679678</updated>
+    </task>
+    <task id="LOCAL-00054" summary="huffman">
+      <created>1637223921282</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1637223921282</updated>
+    </task>
+    <task id="LOCAL-00055" summary="mwis">
+      <created>1637358344283</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1637358344283</updated>
+    </task>
+    <task id="LOCAL-00056" summary="mwis">
+      <created>1637360381908</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1637360381908</updated>
+    </task>
+    <task id="LOCAL-00057" summary="mwis">
+      <created>1637362455006</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1637362455006</updated>
+    </task>
+    <task id="LOCAL-00058" summary="mwis">
+      <created>1637362627400</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1637362627400</updated>
+    </task>
+    <task id="LOCAL-00059" summary="mwis">
+      <created>1637362803345</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1637362803345</updated>
+    </task>
+    <task id="LOCAL-00060" summary="mwis">
+      <created>1637364182270</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1637364182270</updated>
+    </task>
+    <task id="LOCAL-00061" summary="mwis">
+      <created>1637530443935</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1637530443935</updated>
+    </task>
+    <task id="LOCAL-00062" summary="mwis">
+      <created>1642692137324</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1642692137325</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -494,7 +648,8 @@
     <MESSAGE value="prim mst" />
     <MESSAGE value="cleanup project" />
     <MESSAGE value="clustering" />
-    <option name="LAST_COMMIT_MESSAGE" value="clustering" />
+    <MESSAGE value="knapsack refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="knapsack refactor" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -534,6 +689,11 @@
           <line>86</line>
           <option name="timeStamp" value="49" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/general/src/algorithms/Knapsack_big.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
           <option name="timeStamp" value="15" />
@@ -546,6 +706,7 @@
         <watch expression="number1.toString().substring(half)" />
         <watch expression="new BigInteger(String.valueOf((int)Math.pow(10, length)))&#10;                    .multiply(ac)&#10;                    .add(new BigInteger(String.valueOf((int)Math.pow(10, half))).multiply(adbc))&#10;                    .add(bd)" />
         <watch expression="new BigInteger(String.valueOf((int)Math.pow(10, length)))" />
+        <watch expression="weights[count - 1]" />
       </configuration>
     </watches-manager>
   </component>

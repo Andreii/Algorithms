@@ -35,54 +35,49 @@ import java.util.Scanner;
  *
  */
 public class Knapsack {
-    public static void main(String[] args) {
-        class Item {
-            public int value, weight;
-            Item(int value, int weight) {
-                this.value = value;
-                this.weight = weight;
-            }
+    private static class Item {
+        int value, weight;
+        Item(int value, int weight) {
+            this.value = value;
+            this.weight = weight;
         }
+    }
+    public static void main(String[] args) throws FileNotFoundException {
         try {
-            Scanner scanner = new Scanner(new File("general/resources/knapsack.txt"));
+            Scanner scanner = new Scanner(new File("general/resources/knapsack_big.txt"));
 
-            String[] firstLine = scanner.nextLine().split(" ");
-            int C = Integer.parseInt(firstLine[0]);
-            int item_count = Integer.parseInt(firstLine[1]);
-            List<Item> items = new ArrayList<>(item_count+1);
+            String first_line = scanner.nextLine();
+            int C = Integer.parseInt(first_line.split(" ")[0]);
+            int item_count = Integer.parseInt(first_line.split(" ")[1]);
 
-            int[][] A = new int[item_count+1][C+1];
+            int[][] dp = new int[item_count+1][C+1];
 
-            for(int i = 0; i <= C; i++) {
-                A[0][i] = 0;
+            for(int i = 0; i < C; i++) {
+                dp[0][i] = 0;
             }
 
-            items.add(new Item(0,0));
+            List<Item> items = new ArrayList<>();
 
+            int i = 1;
             while(scanner.hasNext()) {
-                String[] currentLine = scanner.nextLine().split(" ");
-                items.add(new Item(Integer.parseInt(currentLine[0]), Integer.parseInt(currentLine[1])));
-            }
+                String line = scanner.nextLine();
+                Item item = new Item(
+                        Integer.parseInt(line.split(" ")[0]),
+                        Integer.parseInt(line.split(" ")[1])
+                );
 
-            for(int i = 1; i <= item_count; i++) {
-                for(int j = 0; j <= C; j++) {
-                    Item item = items.get(i);
-                    if(item.weight > j) {
-                        A[i][j] = A[i-1][j];
+                for (int j = 1; j <= C; j++) {
+                    if (item.weight > j) {
+                        dp[i][j] = dp[i - 1][j];
                     } else {
-                        A[i][j] = Math.max(A[i - 1][j], A[i - 1][Math.max(j - item.weight, 0)] + item.value);
+                        dp[i][j] = Math.max(dp[i - 1][j], item.value + dp[i - 1][Math.max(j - item.weight, 0)]);
                     }
                 }
+                i++;
             }
 
-            for(int i = 1; i <= item_count; i++) {
-                Item item = items.get(i);
-                System.out.printf("Item [%d] has value [%d] and weight [%d]\n", i, item.value, item.weight);
-            }
+            System.out.println("The answer is: " + dp[item_count][C]);
 
-            System.out.println("Result of max knapsack: " + A[item_count][C]);
-        } catch (FileNotFoundException e) {
-            // ignore
-        }
+        } catch (Exception e) { throw e; }
     }
 }
