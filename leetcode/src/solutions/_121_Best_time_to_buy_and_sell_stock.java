@@ -1,11 +1,6 @@
 package solutions;
 
 public class _121_Best_time_to_buy_and_sell_stock {
-
-}
-
-class Solution {
-    // Kadane
     public int maxProfit(int[] prices) {
         int min = prices[0], max = 0;
 
