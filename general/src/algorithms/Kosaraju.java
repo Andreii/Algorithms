@@ -31,9 +31,8 @@ public class Kosaraju {
         }
 
         while(in.hasNext()) {
-            String line = in.nextLine();
-            int v = Integer.parseInt(line.split("\\s")[0]);
-            int w = Integer.parseInt(line.split("\\s")[1]);
+            int v = in.nextInt();
+            int w = in.nextInt();
             List<Integer> wVertexes = adjList.containsKey(v) ? adjList.get(v) : new ArrayList<>();
             List<Integer> vVertexes = adjListReversed.containsKey(w) ? adjListReversed.get(w) : new ArrayList<>();
             wVertexes.add(w);
