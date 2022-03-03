@@ -1,7 +1,9 @@
 package experimenting;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class BitMaskingString {
     public static void main(String[] args) {
@@ -15,7 +17,6 @@ public class BitMaskingString {
     public static List<String> findPalindromes(String input) {
         int n = input.length();
         List<String> palindromes = new ArrayList<>();
-
 
         for(int i = 1; i < (1 << n); i++) {
             String substr = "";
