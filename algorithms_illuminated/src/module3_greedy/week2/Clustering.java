@@ -65,17 +65,12 @@ public class Clustering {
         return 0;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
         Scanner scanner;
 
         List<Edge> edges = new ArrayList<>();
 
-        try {
-            scanner = new Scanner(new File("algorithms_illuminated/resources/clustering1.txt"));
-        } catch( FileNotFoundException e) {
-            System.out.println("File not found");
-            return;
-        }
+        scanner = new Scanner(new File("algorithms_illuminated/resources/clustering1.txt"));
 
         int count = Integer.parseInt(scanner.nextLine());
         int[] cluster = new int[count];

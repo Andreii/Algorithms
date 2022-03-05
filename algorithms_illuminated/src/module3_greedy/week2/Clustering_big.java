@@ -72,14 +72,10 @@ public class Clustering_big {
         return answer;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Scanner scanner = null;
-        try {
-//            scanner = new Scanner(new File("algorithms_illuminated/resources/clustering_big.txt"));
-            scanner = new Scanner(new File("algorithms_illuminated/resources/clustering_big.txt"));
-        } catch (Exception e) {
-            System.out.println("Could not open file path!");
-        }
+        //            scanner = new Scanner(new File("algorithms_illuminated/resources/clustering_big.txt"));
+        scanner = new Scanner(new File("algorithms_illuminated/resources/clustering_big.txt"));
 
         String[] information = scanner.nextLine().split(" ");
         int vertexCount = Integer.parseInt(information[0]);

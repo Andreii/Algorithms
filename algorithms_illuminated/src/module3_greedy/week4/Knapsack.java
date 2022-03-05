@@ -46,41 +46,38 @@ public class Knapsack {
         }
     }
     public static void main(String[] args) throws FileNotFoundException {
-        try {
-            Scanner scanner = new Scanner(new File("algorithms_illuminated/resources/knapsack_big.txt"));
+        Scanner scanner = new Scanner(new File("algorithms_illuminated/resources/knapsack_big.txt"));
 
-            String first_line = scanner.nextLine();
-            int C = Integer.parseInt(first_line.split(" ")[0]);
-            int item_count = Integer.parseInt(first_line.split(" ")[1]);
+        String first_line = scanner.nextLine();
+        int C = Integer.parseInt(first_line.split(" ")[0]);
+        int item_count = Integer.parseInt(first_line.split(" ")[1]);
 
-            int[][] dp = new int[item_count+1][C+1];
+        int[][] dp = new int[item_count+1][C+1];
 
-            for(int i = 0; i < C; i++) {
-                dp[0][i] = 0;
-            }
+        for(int i = 0; i < C; i++) {
+            dp[0][i] = 0;
+        }
 
-            List<Item> items = new ArrayList<>();
+        List<Item> items = new ArrayList<>();
 
-            int i = 1;
-            while(scanner.hasNext()) {
-                String line = scanner.nextLine();
-                Item item = new Item(
-                        Integer.parseInt(line.split(" ")[0]),
-                        Integer.parseInt(line.split(" ")[1])
-                );
+        int i = 1;
+        while(scanner.hasNext()) {
+            String line = scanner.nextLine();
+            Item item = new Item(
+                    Integer.parseInt(line.split(" ")[0]),
+                    Integer.parseInt(line.split(" ")[1])
+            );
 
-                for (int j = 1; j <= C; j++) {
-                    if (item.weight > j) {
-                        dp[i][j] = dp[i - 1][j];
-                    } else {
-                        dp[i][j] = Math.max(dp[i - 1][j], item.value + dp[i - 1][Math.max(j - item.weight, 0)]);
-                    }
+            for (int j = 1; j <= C; j++) {
+                if (item.weight > j) {
+                    dp[i][j] = dp[i - 1][j];
+                } else {
+                    dp[i][j] = Math.max(dp[i - 1][j], item.value + dp[i - 1][Math.max(j - item.weight, 0)]);
                 }
-                i++;
             }
+            i++;
+        }
 
-            System.out.println("The answer is: " + dp[item_count][C]);
-
-        } catch (Exception e) { throw e; }
+        System.out.println("The answer is: " + dp[item_count][C]);
     }
 }

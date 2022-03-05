@@ -32,43 +32,39 @@ public class Huffman {
             this.count = count;
         }
     }
-    public static void main(String[] args) {
-        try {
+    public static void main(String[] args) throws Exception {
+        Scanner scanner = new Scanner(new File("algorithms_illuminated/resources/huffman.txt"));
 
-            Scanner scanner = new Scanner(new File("algorithms_illuminated/resources/huffman.txt"));
+        int count = Integer.parseInt(scanner.nextLine());
+        List<Node> weights = new ArrayList<>();
 
-            int count = Integer.parseInt(scanner.nextLine());
-            List<Node> weights = new ArrayList<>();
+        while(scanner.hasNext()) {
+            int weight = Integer.parseInt(scanner.nextLine());
+            weights.add(new Node(weight, 0));
+        }
 
-            while(scanner.hasNext()) {
-                int weight = Integer.parseInt(scanner.nextLine());
-                weights.add(new Node(weight, 0));
+        PriorityQueue<Node> queue = new PriorityQueue<>(new Comparator<Node>() {
+            @Override
+            public int compare(Node left, Node right) {
+                return left.weight - right.weight;
             }
+        });
 
-            PriorityQueue<Node> queue = new PriorityQueue<>(new Comparator<Node>() {
-                @Override
-                public int compare(Node left, Node right) {
-                    return left.weight - right.weight;
-                }
-            });
+        queue.addAll(weights);
 
-            queue.addAll(weights);
+        while(queue.size() >= 2) {
+            Node item1 = queue.remove();
+            Node item2 = queue.remove();
 
-            while(queue.size() >= 2) {
-                Node item1 = queue.remove();
-                Node item2 = queue.remove();
-
-                Node newItem = new Node(
-                        item1.weight + item2.weight,
-                        Math.max(item1.count, item2.count) + 1 // max bit
+            Node newItem = new Node(
+                    item1.weight + item2.weight,
+                    Math.max(item1.count, item2.count) + 1 // max bit
 //                        Math.min(item1.count, item2.count) + 1 -> min bit
-                );
+            );
 
-                queue.add(newItem);
-            }
+            queue.add(newItem);
+        }
 
-            System.out.println(queue.poll().count);
-
-        } catch (FileNotFoundException e) { }
+        System.out.println(queue.poll().count);
     }
 }
