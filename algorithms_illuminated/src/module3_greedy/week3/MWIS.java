@@ -28,49 +28,47 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class MWIS {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
-        try {
-            Scanner scanner = new Scanner(new File("algorithms_illuminated/resources/mwis.txt"));
+        Scanner scanner = new Scanner(new File("algorithms_illuminated/resources/mwis.txt"));
 //            Scanner scanner = new Scanner(new File("algorithms_illuminated/resources/mwis_1.txt")); // 0101010101
 //            Scanner scanner = new Scanner(new File("algorithms_illuminated/resources/mwis_2.txt")); // 1010010010
 //            Scanner scanner = new Scanner(new File("algorithms_illuminated/resources/mwis_small.txt"));
 
-            int vertices_count = Integer.parseInt(scanner.nextLine());
-            long[] weights = new long[vertices_count+1];
+        int vertices_count = Integer.parseInt(scanner.nextLine());
+        long[] weights = new long[vertices_count+1];
 
-            int loop = 1;
-            while(scanner.hasNext()) {
-                weights[loop++] = Long.parseLong(scanner.nextLine());
+        int loop = 1;
+        while(scanner.hasNext()) {
+            weights[loop++] = Long.parseLong(scanner.nextLine());
+        }
+
+        long[] A = new long[vertices_count+1];
+        long[] solution = new long[vertices_count+1];
+
+        A[0] = 0;
+        A[1] = weights[1];
+
+        for(int i = 2; i <= vertices_count; i++) {
+            A[i] = Math.max(A[i-1], A[i-2] + weights[i]);
+        }
+
+        int i = vertices_count;
+        while(i >= 1) {
+            if(i==1) { solution[1] = 1; break; }
+            if(A[i-1] >= A[i-2] + weights[i]) {
+                i--;
+            } else {
+                solution[i] = 1;
+                i-=2;
             }
-
-            long[] A = new long[vertices_count+1];
-            long[] solution = new long[vertices_count+1];
-
-            A[0] = 0;
-            A[1] = weights[1];
-
-            for(int i = 2; i <= vertices_count; i++) {
-                A[i] = Math.max(A[i-1], A[i-2] + weights[i]);
-            }
-
-            int i = vertices_count;
-            while(i >= 1) {
-                if(i==1) { solution[1] = 1; break; }
-                if(A[i-1] >= A[i-2] + weights[i]) {
-                    i--;
-                } else {
-                    solution[i] = 1;
-                    i-=2;
-                }
-            }
+        }
 
 //            int[] vertices_index_to_check = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-            int[] vertices_index_to_check = new int[] { 1, 2, 3, 4, 17, 117, 517, 997 };
+        int[] vertices_index_to_check = new int[] { 1, 2, 3, 4, 17, 117, 517, 997 };
 
-            for(int vertex : vertices_index_to_check) {
-                System.out.print(solution[vertex]);
-            }
-        } catch (FileNotFoundException e ) { /* ignore */ }
+        for(int vertex : vertices_index_to_check) {
+            System.out.print(solution[vertex]);
+        }
     }
 }
