@@ -30,16 +30,7 @@ import java.math.BigInteger;
  * final numeric answer in the following space.)
  */
 public class Karatsuba {
-    public static void main(String[] args) {
-
-        BigInteger nr1 = new BigInteger("3141592653589793238462643383279502884197169399375105820974944592");
-        BigInteger nr2 = new BigInteger("2718281828459045235360287471352662497757247093699959574966967627");
-
-
-        System.out.printf("Result is %s", karatsuba(nr1,nr2).toString());
-    }
-
-    private static BigInteger karatsuba(BigInteger number1, BigInteger number2) {
+    public static BigInteger karatsuba(BigInteger number1, BigInteger number2) {
         int length = Math.min(number1.toString().length(), number2.toString().length());
         int half = (int) Math.floor(length/2);
 

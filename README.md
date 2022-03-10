@@ -1,6 +1,6 @@
 # Algorithm learning
 
-This repository is home to my solutions to courses and problems. The objective is learning and getting better at problem solving.
+This repository is home to my solutions to problems and various data structures. The objective is learning and getting better at problem-solving.
 
 The main areas are:
 - Algorithms Illuminated ([Link](https://www.algorithmsilluminated.org/))

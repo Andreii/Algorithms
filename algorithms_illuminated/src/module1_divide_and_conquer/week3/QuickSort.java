@@ -41,7 +41,7 @@ import java.util.*;
  * the numeric answer in the following space.)
  */
 public class QuickSort {
-    private static int switches = 0;
+    public static int switches = 0;
 
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new FileReader("algorithms_illuminated/resources/1_QuickSort.txt"));
@@ -62,7 +62,7 @@ public class QuickSort {
         System.out.println();
     }
 
-    private static void quicksort(int[] arr, int l, int r) {
+    public static void quicksort(int[] arr, int l, int r) {
         if (l < r) {
             int i = choosePartition(arr, l, r);
             int z = arr[i];
