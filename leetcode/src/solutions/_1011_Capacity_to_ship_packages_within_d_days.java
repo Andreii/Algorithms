@@ -58,10 +58,7 @@ public class _1011_Capacity_to_ship_packages_within_d_days {
             q.add(w);
         }
 
-        // 2 4 1 4
-        int sum = 0; // 0
-        // q = 6
-        // d = 2
+        int sum = 0;
         while( q.size() > 0 && d >= 1 ) {
             while(q.size() > 0 && sum + q.peek() <= maxWeight) {
                 sum += q.poll();
@@ -76,7 +73,6 @@ public class _1011_Capacity_to_ship_packages_within_d_days {
 
     public int shipWithinDays(int[] weights, int days) {
 
-        // 1,2,3,4,5,6,7
         int sumW = 0;
         int maxW = 0;
         int d = days;
