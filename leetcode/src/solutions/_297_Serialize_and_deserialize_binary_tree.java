@@ -35,35 +35,38 @@ import java.util.*;
  * -1000 <= Node.val <= 1000
  */
 public class _297_Serialize_and_deserialize_binary_tree {
-    public static void dfsSerialize(TreeNode root, List<String> s) {
+    public static void dfsSerialize(TreeNode root, List<String> out) {
         if(root == null) {
-            s.add("x");
-            return;
+            out.add("x");
+        } else {
+            out.add(root.val + "");
+            dfsSerialize(root.left, out);
+            dfsSerialize(root.right, out);
         }
-
-        s.add(String.valueOf(root.val));
-
-        dfsSerialize(root.left, s);
-        dfsSerialize(root.right, s);
     }
 
     public static String serialize(TreeNode root) {
-        List<String> nodeList = new ArrayList<>();
-        dfsSerialize(root, nodeList);
-        return String.join(",", nodeList);
+        List<String> out = new ArrayList<>();
+        dfsSerialize(root, out);
+        return String.join(",", out);
+    }
+
+    public static TreeNode dfsDeserialize(LinkedList<String> in) {
+        String val = in.poll();
+        if(val != null && val.equals("x")) return null;
+
+        TreeNode root = new TreeNode(Integer.parseInt(val));
+        root.left = dfsDeserialize(in);
+        root.right = dfsDeserialize(in);
+        return root;
     }
 
     public static TreeNode deserialize(String root) {
-        // create an iterator that returns a token each time we call `next`
-        return deserializeDFS(Arrays.stream(root.split(",")).iterator());
-    }
-
-    private static TreeNode deserializeDFS(Iterator<String> nodes) {
-        String val = nodes.next();
-        if (val.equals("x")) return null;
-        TreeNode cur = new TreeNode(Integer.parseInt(val));
-        cur.left = deserializeDFS(nodes);
-        cur.right = deserializeDFS(nodes);
-        return cur;
+        LinkedList<String> in = new LinkedList<>();
+        String[] strings_arr = root.split(",");
+        for(String s : strings_arr) {
+            in.add(s);
+        }
+        return dfsDeserialize(in);
     }
 }
