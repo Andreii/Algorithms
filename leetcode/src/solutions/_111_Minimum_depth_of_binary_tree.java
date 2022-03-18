@@ -61,6 +61,28 @@ public class _111_Minimum_depth_of_binary_tree {
             return minHeight;
         }
 
+        public int minDepth3(TreeNode root) {
+            if(root == null) return 0;
+            LinkedList<TreeNode> q = new LinkedList<>();
+            q.add(root);
+
+            int level = 1;
+            while(!q.isEmpty()) {
+
+                int n = q.size();
+                for(int i = 0; i < n; i++) {
+                    TreeNode cur = q.poll();
+                    if(cur.left == null && cur.right == null) return level;
+                    if(cur.left != null) q.add(cur.left);
+                    if(cur.right != null) q.add(cur.right);
+                }
+
+                level++;
+            }
+
+            return -1;
+        }
+
         public int minDepth2(TreeNode root) {
             if(root == null) return 0;
             int left = minDepth(root.left);
