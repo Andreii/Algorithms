@@ -28,6 +28,7 @@ import java.util.List;
  */
 
 public class _78_subsets {
+    protected static final int[][] coords = new int[][]{ new int[] {1,0}, new int[] {0,1}, new int[] {-1,0}, new int[] {0,-1}};
     private void dfs(int[] nums, int i, List<Integer> path, List<List<Integer>> ans) {
         if(i == nums.length) {
             ans.add(new ArrayList<>(path));
