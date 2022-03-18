@@ -42,11 +42,10 @@ public class _199_Binary_tree_right_side_view {
         q.add(root);
 
         while(!q.isEmpty()) {
-
+            ans.add(q.peekLast().val);
             int n = q.size();
             for(int i = 0; i < n; i++) {
                 TreeNode cur = q.poll();
-                if(i == n-1) ans.add(cur.val);
                 if(cur.left!=null) q.add(cur.left);
                 if(cur.right!=null) q.add(cur.right);
             }
