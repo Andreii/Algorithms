@@ -38,7 +38,7 @@ package un;
  */
 // WIP !!
 public class _79_word_search {
-    protected static final int[][] coords = new int[][]{ new int[] {1,0}, new int[] {0,1}, new int[] {-1,0}, new int[] {0,-1}};
+    protected static final int[][] COORDS = {{1,0},{0,1},{-1,0},{0,-1}};
 
     protected boolean dfs(char[][]board, int i, int j, int index_word, String word, boolean[][] visited) {
         if(index_word > word.length() -1) return false;
@@ -48,9 +48,9 @@ public class _79_word_search {
 
         if(visited[i][j]) return false;
 
-        for(int z = 0; z < coords.length; z++) {
-            int new_i = Math.min(board.length-1, Math.max(0, i + coords[z][0]));
-            int new_j = Math.min(board[i].length-1, Math.max(0, j + coords[z][1]));
+        for(int z = 0; z < COORDS.length; z++) {
+            int new_i = Math.min(board.length-1, Math.max(0, i + COORDS[z][0]));
+            int new_j = Math.min(board[i].length-1, Math.max(0, j + COORDS[z][1]));
 
             visited[new_i][new_j] = true;
             if(dfs(board, new_i, new_j, index_word + 1, word, visited)) return true;
