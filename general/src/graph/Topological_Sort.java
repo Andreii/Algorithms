@@ -8,16 +8,18 @@ import java.util.Scanner;
 
 /**
  *        2  ->  4
- *      /  \      \
+ *       .\       \
+ *      /  .       .
  *     1    3      5
- *      \  /      /
+ *     \   .      .
+ *      . /      /
  *       6   -> 7
  *
  *       topo: 1 6 2 3 4 7 5
  */
 public class Topological_Sort {
     public static void main(String[] args) throws Exception {
-        Scanner scanner = new Scanner(new File("general/resources/topo.txt"));
+        Scanner scanner = new Scanner(new File("general/resources/topo2.txt"));
 
         int n =  scanner.nextInt();
         List<List<Integer>> adj = new ArrayList<>(n);
@@ -35,18 +37,18 @@ public class Topological_Sort {
         LinkedList<Integer> result = new LinkedList<>();
         boolean[] visited = new boolean[n+1];
 
-        for(int i = n; i >= 1; i--)
+        for(int i = 1; i <= n; i++)
             if(!visited[i])
-                topoSort(i, result, visited, adj);
+                topoSortDFS(i, result, visited, adj);
 
-        System.out.println("Topo sort: " + result);
+        System.out.println("Topo DFS sort: " + result);
     }
 
-    public static void topoSort(int i, LinkedList<Integer> result, boolean[] visited, List<List<Integer>> adj) {
+    public static void topoSortDFS(int i, LinkedList<Integer> result, boolean[] visited, List<List<Integer>> adj) {
         visited[i] = true;
         for(Integer u : adj.get(i)) {
             if(!visited[u]) {
-                topoSort(u, result, visited, adj);
+                topoSortDFS(u, result, visited, adj);
             }
         }
         result.addFirst(i);
