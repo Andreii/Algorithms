@@ -39,11 +39,17 @@ import java.util.*;
  * words[i] consists of only lowercase English letters.
  */
 public class _269_Alien_dictionary {
+    public static void main(String[] args) {
+        _269_Alien_dictionary c = new _269_Alien_dictionary();
+
+        System.out.println(c.alienOrder(new String[] { "wrt","wrf","er","ett","rftt"}));
+    }
+
     public String alienOrder(String[] words) {
-        Map<Character, List<Character>> adj = new HashMap<>();
+        Map<Character,List<Character>> adj = new HashMap<>();
         Map<Character,Integer> indegree = new HashMap<>();
         LinkedList<Character> q = new LinkedList<>();
-        String res = "";
+        StringBuilder res = new StringBuilder();
 
         for(String word : words) {
             for(int i = 0; i < word.length(); i++) {
@@ -57,10 +63,7 @@ public class _269_Alien_dictionary {
             String w1 = words[i];
             String w2 = words[i+1];
 
-            if(w1.length() > w2.length() && w1.startsWith(w2)) {
-
-                return "";
-            }
+            if(w1.length() > w2.length() && w1.startsWith(w2)) return "";
 
             for(int j = 0; j < Math.min(w1.length(),w2.length()); j++) {
                 if(w1.charAt(j) != w2.charAt(j)) {
@@ -82,7 +85,7 @@ public class _269_Alien_dictionary {
 
         while(!q.isEmpty()) {
             Character u = q.pop();
-            res += String.valueOf(u);
+            res.append(String.valueOf(u));
 
             for(Character v : adj.get(u)) {
                 indegree.put(v, indegree.get(v) - 1);
@@ -94,6 +97,6 @@ public class _269_Alien_dictionary {
 
         if(res.length() != indegree.size()) return "";
 
-        return res;
+        return res.toString();
     }
 }
