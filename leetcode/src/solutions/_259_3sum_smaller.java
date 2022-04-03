@@ -32,7 +32,7 @@ import java.util.Arrays;
  * -100 <= nums[i] <= 100
  * -100 <= target <= 100
  */
-public class _3sum_smaller {
+public class _259_3sum_smaller {
     public int threeSumSmaller(int[] nums, int t) {
         int n = nums.length;
         if(n <= 2) return 0;

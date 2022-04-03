@@ -1,7 +1,6 @@
 package solutions;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Given a string s, consider all duplicated substrings: (contiguous) substrings of s that occur 2 or more times.
@@ -27,19 +26,40 @@ import java.util.Set;
  * 2 <= s.length <= 3 * 104
  * s consists of lowercase English letters.
  */
+
 public class _1044_longest_duplicate_substring {
+    public static void main(String[] args) {
+        _1044_longest_duplicate_substring c = new _1044_longest_duplicate_substring();
+
+        System.out.println(c.longestDupSubstring("ababdaebdabedeabbdddbcebaccececbccccebbcaaabaadcadccddaedaacaeddddeceedeaabbbbcbacdaeeebaabdabdbaebadcbdebaaeddcadebedeabbbcbeadbaacdebceebceeccddbeacdcecbcdbceedaeebdaeeabccccbcccbceabedaedaacdbbdbadcdbdddddcdebbcdbcabbebbeabbdccccbaaccbbcecacaebebecdcdcecdeaccccccdbbdebaaaaaaeaaeecdecedcbabedbabdedbaebeedcecebabedbceecacbdecabcebdcbecedccaeaaadbababdccedebeccecaddeabaebbeeccabeddedbeaadbcdceddceccecddbdbeeddabeddadaaaadbeedbeeeaaaeaadaebdacbdcaaabbacacccddbeaacebeeaabaadcabdbaadeaccaecbeaaabccddabbeacdecadebaecccbabeaceccaaeddedcaecddaacebcaecebebebadaceadcaccdeebbcdebcedaeaedacbeecceeebbdbdbaadeeecabdebbaaebdddeeddabcbaaebeabbbcaaeecddecbbbebecdbbbaecceeaabeeedcdecdcaeacabdcbcedcbbcaeeebaabdbaadcebbccbedbabeaddaecdbdbdccceeccaccbdcdadcccceebdabccaebcddaeeecddddacdbdbeebdabecdaeaadbadbebecbcacbbceeabbceecaabdcabebbcdecedbacbcccddcecccecbacddbeddbbbadcbdadbecceebddeacbeeabcdbbaabeabdbbbcaeeadddaeccbcdabceeabaacbeacdcbdceebeaebcceeebdcdcbeaaeeeadabbecdbadbebbecdceaeeecaaaedeceaddedbedbedbddbcbabeadddeccdaadaaeaeeadebbeabcabbdebabeedeeeccadcddaebbedadcdaebabbecedebadbdeacecdcaebcbdababcecaecbcbcdadacaebdedecaadbaaeeebcbeeedaaebbabbeeadadbacdedcbabdaabddccedbeacbecbcccdeaeeabcaeccdaaaddcdecadddabcaedccbdbbccecacbcdecbdcdcbabbeaacddaeeaabccebaaaebacebdcdcbbbdabadeebbdccabcacaacccccbadbdebecdaccabbecdabdbdaebeeadaeecbadedaebcaedeedcaacabaccbbdaccedaedddacbbbdbcaeedbcbecccdbdeddcdadacccdbcdccebdebeaeacecaaadccbbaaddbeebcbadceaebeccecabdadccddbbcbaebeaeadacaebcbbbdbcdaeadbcbdcedebabbaababaacedcbcbceaaabadbdcddadecdcebeeabaadceecaeccdeeabdbabebdcedceaeddaecedcdbccbbedbeecabaecdbba"));
+        System.out.println("Expected 'aeeebaabd'");
+    }
+
+    private final int P = 1_000_000_007;
+    private final int base = 26;
     public String longestDupSubstring(String s) {
         String res = "";
-        int L = 1, R = s.length();
+        int L = 1, R = s.length()-1, n = s.length();
 
-        while(L<=R) {
-            int M = L + (R-L)/2;
+        long[] hash = new long[n+1];
+        hash[0] = 1L;
+        for(int i = 1; i <= n; i++) {
+            hash[i] = (hash[i-1] * base) % P;
+        }
 
-            String dupl = getDuplicate(s, M);
-            int dl = dupl.length(), rl = res.length();
+        int[] nums = new int[n];
+        for(int i = 0; i < n; i++) {
+            nums[i] = (int)s.charAt(i) - (int) 'a';
+        }
 
-            if(!dupl.equals("")) {
-                res = dupl;
+        while(L <= R) {
+
+            int M = L + (R-L) / 2;
+
+            String curr = getDuplicate(s, M, hash, n, nums);
+
+            if(!curr.equals("")) {
+                if(curr.length() > res.length()) res = curr;
                 L = M+1;
             } else {
                 R = M-1;
@@ -49,17 +69,36 @@ public class _1044_longest_duplicate_substring {
         return res;
     }
 
-    // TLE
-    public String getDuplicate(String s, int M) {
-        Set<String> visited = new HashSet<>();
+    public String getDuplicate(String s, int M, long[] hash, int n, int[] nums) {
 
-        for(int i = 0; i < s.length() - M + 1; i++) {
-            String try_s = s.substring(i, i+M);
-            if(!visited.contains(try_s)) {
-                visited.add(try_s);
-            } else {
-                return try_s;
+        long h = 0;
+        for(int i = 0; i < M; i++) {
+            h = (h * base + nums[i]) % P;
+        }
+
+        HashMap<Long, List<Integer>> visited = new HashMap<>();
+        visited.putIfAbsent(h, new ArrayList<>());
+        visited.get(h).add(0);
+
+        for(int i = 1; i < n - M + 1; i++) {
+            h = (h * base - nums[i - 1] * hash[M] % P + P) % P;
+            h = (h + nums[i + M - 1]) % P;
+
+            List<Integer> seen_list = visited.get(h);
+            if(seen_list != null) {
+
+                String s2 = s.substring(i, i + M);
+                for(Integer index : seen_list) {
+                    String s1 = s.substring(index, index + M);
+
+                    if(s1.equals(s2)) {
+                        return s1;
+                    }
+                }
             }
+
+            visited.putIfAbsent(h, new ArrayList<>());
+            visited.get(h).add(i);
         }
 
         return "";
