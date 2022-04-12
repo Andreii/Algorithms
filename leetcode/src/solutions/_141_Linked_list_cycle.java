@@ -45,9 +45,10 @@ import utils.ListNode;
 public class _141_Linked_list_cycle {
     public boolean hasCycle(ListNode head) {
         if(head == null) return false;
+        if(head.next == null) return false;
 
-        ListNode slow = head;
-        ListNode fast = head.next;
+        ListNode slow = head.next;
+        ListNode fast = head.next.next;
         while(slow != fast) {
             if(fast == null || fast.next == null) return false;
 
