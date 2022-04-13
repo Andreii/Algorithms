@@ -26,6 +26,8 @@ package un;
  * 0 <= height[i] <= 105
  */
 public class _42_trapping_rain_water {
+    // TC: O(n)
+    // SC: O(n)
     public int trap(int[] height) {
         int n = height.length;
         int[] left = new int[n];
@@ -48,6 +50,28 @@ public class _42_trapping_rain_water {
         int res = 0;
         for(int i = 0; i < n; i++) {
             res += fill[i] - height[i];
+        }
+
+        return res;
+    }
+
+    // TC: O(n)
+    // SC: O(1)
+    public int trap2(int[] height) {
+        int n = height.length;
+        int L = 0, R = n - 1;
+        int left_max = 0, right_max = 0, res = 0;
+
+        while(L < R) {
+            if(height[L] <= height[R]) {
+                left_max = Math.max(left_max, height[L]);
+                res += left_max - height[L];
+                L++;
+            } else {
+                right_max = Math.max(right_max, height[R]);
+                res += right_max - height[R];
+                R--;
+            }
         }
 
         return res;
