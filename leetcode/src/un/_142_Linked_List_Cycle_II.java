@@ -43,23 +43,6 @@ import utils.ListNode;
  * Follow up: Can you solve it using O(1) (i.e. constant) memory?
  */
 public class _142_Linked_List_Cycle_II {
-    public static void main(String[] args) {
-        _142_Linked_List_Cycle_II c = new _142_Linked_List_Cycle_II();
-
-        int[] vals = {3,2,0,5};
-
-        ListNode head = new ListNode(vals[0]);
-        ListNode loop = head;
-        for(int i = 1; i < vals.length; i ++) {
-            loop.next = new ListNode(vals[i]);
-            loop = loop.next;
-        }
-
-        loop.next = head.next;
-
-        System.out.println(c.detectCycle(head).equals(head.next));
-    }
-
     public ListNode detectCycle(ListNode head) {
         if(head == null) return null;
         if(head.next == null) return null;

@@ -2,6 +2,7 @@ package un;
 
 import utils.ListNode;
 
+import java.util.Comparator;
 import java.util.PriorityQueue;
 
 /**
@@ -45,6 +46,7 @@ import java.util.PriorityQueue;
 public class _23_merge_k_sorted_lists {
     // TC: O(kB log kB)
     // SC: O(kB)
+    // PQ unbound
     public ListNode mergeKLists(ListNode[] lists) {
         int k = lists.length;
         ListNode res = new ListNode();
@@ -71,11 +73,12 @@ public class _23_merge_k_sorted_lists {
 
     // TC: O(kB log k)
     // SC: O(k)
+    // PQ bound to k lists
     public ListNode mergeKLists2(ListNode[] lists) {
         int k = lists.length;
         ListNode res = new ListNode();
         if(k == 0) return null;
-        PriorityQueue<ListNode> pq = new PriorityQueue<>(k, (a,b) -> a.val - b.val);
+        PriorityQueue<ListNode> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a.val));
 
         for(ListNode list : lists) {
             if(list != null) {
