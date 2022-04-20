@@ -7,13 +7,7 @@ package com.omtia.ctci.Arrays_and_Strings;
 import static org.junit.Assert.*;
 
 public class _1_3_URLify {
-    public static void main(String[] args) {
-        assertEquals(URLify("Mr John Smith     "), "Mr%20John%20Smith");
-
-        System.out.println(URLify("Mr John Smith     "));
-    }
-
-    public static String URLify(String s) {
+    public String URLify(String s) {
         s = s.trim();
         char[] c = s.toCharArray();
 
