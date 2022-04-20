@@ -1,3 +1,11 @@
+/*
+ * @author Andrei Constantin Tanasache, act@omtia.com
+ */
+
+/*
+ * @author Andrei Constantin Tanasache, act@omtia.com
+ */
+
 package com.omtia.un;
 
 import java.util.HashSet;
