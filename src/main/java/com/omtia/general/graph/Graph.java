@@ -2,10 +2,6 @@
  * @author Andrei Constantin Tanasache, act@omtia.com
  */
 
-/*
- * @author Andrei Constantin Tanasache, act@omtia.com
- */
-
 package com.omtia.general.graph;
 
 import java.util.Arrays;

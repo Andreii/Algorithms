@@ -2,13 +2,8 @@
  * @author Andrei Constantin Tanasache, act@omtia.com
  */
 
-/*
- * @author Andrei Constantin Tanasache, act@omtia.com
- */
-
 package com.omtia.leetcode;
 
-import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
