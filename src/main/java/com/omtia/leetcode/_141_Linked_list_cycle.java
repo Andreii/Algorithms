@@ -53,8 +53,8 @@ public class _141_Linked_list_cycle {
         if(head == null) return false;
         if(head.next == null) return false;
 
-        ListNode slow = head.next;
-        ListNode fast = head.next.next;
+        ListNode slow = head;
+        ListNode fast = head;
         while(slow != fast) {
             if(fast == null || fast.next == null) return false;
 
