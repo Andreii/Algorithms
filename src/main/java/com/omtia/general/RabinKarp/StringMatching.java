@@ -7,20 +7,11 @@ package com.omtia.general.RabinKarp;
 import java.util.Arrays;
 
 public class StringMatching {
-
     protected static int[] P;
     protected static final int p = 131;
     protected static final int M = (int) (1e9+7);
 
-    public static void main(String[] args) {
-        String string = "testString";
-
-        for(int character : computeRollingHash(string)) {
-            System.out.println(character);
-        }
-    }
-
-    public static int[] prepareP(int n) {
+    public int[] prepareP(int n) {
         P = new int[n];
         Arrays.fill(P, 0);
 
@@ -32,7 +23,7 @@ public class StringMatching {
         return P;
     }
 
-    public static int[] computeRollingHash(String T) {
+    public int[] computeRollingHash(String T) {
         int[] P = prepareP(T.length());
         int[] h = new int[T.length()];
         Arrays.fill(h, 0);
