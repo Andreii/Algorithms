@@ -37,6 +37,7 @@ package com.omtia.leetcode;
 public class _70_Climbing_stairs {
     // TC: O(n)
     // SC: O(n)
+    // bottom up dp
     public int climbStairs(int n) {
         if(n<=1) return n;
 
@@ -53,6 +54,7 @@ public class _70_Climbing_stairs {
 
     // TC: O(n)
     // SC: O(1)
+    // bottom up dp
     public int climbStairs2(int n) {
         if (n <= 1) {
             return 1;
