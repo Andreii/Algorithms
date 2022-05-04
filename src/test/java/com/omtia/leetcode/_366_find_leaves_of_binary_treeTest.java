@@ -2,8 +2,9 @@
  * @author Andrei Constantin Tanasache, act@omtia.com
  */
 
-package com.omtia.un;
+package com.omtia.leetcode;
 
+import com.omtia.un._366_find_leaves_of_binary_tree;
 import com.omtia.utils.TreeNode;
 import org.junit.jupiter.api.Test;
 
