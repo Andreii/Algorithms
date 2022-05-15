@@ -18,7 +18,7 @@ public class StringMatching {
         P[0] = 1;
 
         for(int i = 1; i < n; i++) {
-            P[i] = (int)((double)(P[i-1]*p) % M);
+            P[i] = (int)( (double) (P[i-1] * p) % M);
         }
         return P;
     }

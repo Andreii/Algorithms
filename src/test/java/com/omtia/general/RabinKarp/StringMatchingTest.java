@@ -7,9 +7,9 @@ import static com.google.common.truth.Truth.assertThat;
 class StringMatchingTest {
 
     @Test
-    void computeRollingHash() {
-        StringMatching classz = new StringMatching();
+    void computeRollingHash_worksForBaseCase() {
+        StringMatching c = new StringMatching();
 
-        assertThat(classz.computeRollingHash("tte")).isEqualTo(new int[] {116, 15312, 1748573});
+        assertThat(c.computeRollingHash("tte")).isEqualTo(new int[] {116, 15312, 1748573});
     }
 }
