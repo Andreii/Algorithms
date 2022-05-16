@@ -26,10 +26,10 @@ public class IntegerPair implements Comparable<IntegerPair> {
         }
     }
 
-    Integer first() {
+    public Integer first() {
         return u;
     }
-    Integer second() {
+    public Integer second() {
         return v;
     }
 
